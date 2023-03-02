@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Matthieu Hanf"
+  site-url: https://www.quantumjitter.com
   navbar:
     background: dark
     foreground: light
@@ -13,6 +14,14 @@ website:
       - about.qmd
       - research.qmd
       - software.qmd
+    right:
+      - icon: github
+        href: https://github.com/mhanf
+        
+  page-footer:
+    border: false
+    left: "Published with [Quarto](https://quarto.org/) | Hosted by [Github](https://www.github.com)"
+    right: "© 2023 [Matthieu Hanf](/about) | [MIT License](https://opensource.org/license/mit-0/)"
       
 format:
   html:
