@@ -44,7 +44,7 @@ Cayenne, French Guiana\
 :::
 :::
 
--   Title: *Value of open data in epidemiology : using ecological studies in infectious epidemiology*
+-   Title: *Value of open data in infectious diseases epidemiology*
 
 ::: {.d-flex .justify-content-between}
 <div>
