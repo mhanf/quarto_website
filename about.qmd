@@ -1,0 +1,295 @@
+---
+title: "About"
+---
+
+I am currently Head of Data at Sesan, a non-profit organization working with the Île-de-France Regional Health Agency (Paris area).
+
+### Research Interests
+
+-   Biostatistics
+-   Machine Learning
+-   Data Science
+-   Infectious Diseases
+-   Maternal & Child Health
+
+### Education
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**University of Versailles Saint Quentin**\
+Accreditation to supervise research (HDR)
+
+</div>
+
+::: text-end
+Paris, France\
+2017
+:::
+:::
+
+-   Title: *Implications of a systemic approach to health in epidemiology*
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**University of French Antilles and Guiana**\
+PhD in epidemiology
+
+</div>
+
+::: text-end
+Cayenne, French Guiana\
+2011
+:::
+:::
+
+-   Title: *Value of open data in epidemiology : using ecological studies in infectious epidemiology*
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**AgroPariTech**\
+MSc in life and environmental sciences and technologies
+
+</div>
+
+::: text-end
+Paris, France\
+2006
+:::
+:::
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**University of Paris-Sud 11**\
+MSc in stochastic and statistical Modeling
+
+</div>
+
+::: text-end
+Paris, France\
+2006
+:::
+:::
+
+### Academic Experience
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**Inserm/University of Paris-Saclay/ University of Versailles Saint Quentin**\
+High dimensional biostatistics, UMR 1018
+
+</div>
+
+::: text-end
+Villejuif, France\
+July 2016 - present
+:::
+:::
+
+*Associate Researcher*
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**Inserm/University of Paris-Saclay/ University of Versailles Saint Quentin**\
+High dimensional biostatistics, UMR 1018
+
+</div>
+
+::: text-end
+Villejuif, France\
+2012 - 2013
+:::
+:::
+
+*Post-doctoral fellow*
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**University of French Antilles and Guiana**\
+Epidemiology of Tropical diseases, EA 3593
+
+</div>
+
+::: text-end
+Cayenne, French Guiana\
+2009 - 2011
+:::
+:::
+
+*PhD fellow*
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**Inserm**\
+Clinical trials in infectious diseases, SC10-US019
+
+</div>
+
+::: text-end
+Villejuif, France\
+2007 - 2008
+:::
+:::
+
+*Research Engineer*
+
+### Professional Experience
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**Sesan**\
+*Head of data*
+
+</div>
+
+::: text-end
+Paris, France\
+May 2018 - present
+:::
+:::
+
+-   Manage a multidisciplinary team (23 persons)\
+-   Help health professionals to identify their data needs\
+-   Design data infrastructure to collect, organize, document, and track regional health data\
+-   Develop repeatable processes and structures for regular analysis and reports\
+-   Create and maintain visualizations, dashboards and services from health data\
+-   Conduct descriptive and predictive analyses
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**Nantes University Hospital**\
+*Epidemiologist*
+
+</div>
+
+::: text-end
+Nantes, France\
+2013 - 2018
+:::
+:::
+
+-   Develop studies in infectious diseases and child & maternal epidemiology
+-   Manage data from hospital / regional databases, cohorts & registries
+-   Help health professionals to develop epidemiological studies
+-   Perform advanced biostatistics analyses
+-   Teach Biostatistics & Epidemiology
+
+::: {.d-flex .justify-content-between}
+<div>
+
+**Cayenne General Hospital**\
+*Biostatistician*
+
+</div>
+
+::: text-end
+Cayenne, French Guiana\
+2013 - 2018
+:::
+:::
+
+-   Develop studies in tropical diseases epidemiology
+-   Manage data from hospital databases, cohorts & registries
+-   Help health professionals to analyse epidemiological data
+-   Perform advanced biostatistics analyses
+
+### Teaching
+
+#### Facebook
+
+::: {.d-flex .justify-content-between}
+<div>
+
+Internal datacamp class on designing and analyzing experiments
+
+</div>
+
+::: text-end
+2017-2019
+:::
+:::
+
+#### NYU Undergraduate
+
+::: {.d-flex .justify-content-between}
+<div>
+
+TA for Power and Politics in America (under Jonathan Nagler)
+
+</div>
+
+::: text-end
+Fall 2014
+:::
+:::
+
+::: {.d-flex .justify-content-between}
+<div>
+
+TA for Games, Strategy and Politics (under Steven Brams)
+
+</div>
+
+::: text-end
+Fall 2013
+:::
+:::
+
+#### NYU Graduate
+
+::: {.d-flex .justify-content-between}
+<div>
+
+TA for Quantitative Methods II (under Nathaniel Beck)
+
+</div>
+
+::: text-end
+Spring 2015
+:::
+:::
+
+::: {.d-flex .justify-content-between}
+<div>
+
+TA for Quantitative Methods II (under Cyrus Samii)
+
+</div>
+
+::: text-end
+Spring 2014
+:::
+:::
+
+::: {.d-flex .justify-content-between}
+<div>
+
+High Performance Computing Talk for NYU Datalab
+
+</div>
+
+::: text-end
+February 2014
+:::
+:::
+
+::: {.d-flex .justify-content-between}
+<div>
+
+Introduction to R for NYU Datalab
+
+</div>
+
+::: text-end
+January 2013
+:::
+:::

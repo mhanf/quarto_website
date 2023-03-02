@@ -1,0 +1,69 @@
+---
+title: "Epidemiology & Data Science"
+page-layout: full
+image: /social-card.jpg
+resources:
+    - "social-card.jpg"
+---
+
+::: column-page-inset
+::: column-page-inset-left
+
+I am Head of Data at Sesan, a non-profit organization working with the Île-de-France Regional Health Agency.
+
+I like to construct Tools, Models and Dataviz that make insights for health professionals & patients.
+
+I am a research associate at the French National Institute of Health and Medical Research.
+
+My researches revolve around Statistics, Infectious Diseases and Maternal & Child Health.
+
+I am a R & Python enthusiast but is happy to experiment with others languages.
+
+I live in Paris with my family.
+
+For more check out my background, research and projects.
+:::
+
+::: {.column-margin .column-container}
+![](image/6_SESAN_017carre.jpg){.rounded-circle}
+:::
+:::
+
+{{< pagebreak >}}
+
+::: {.column-page-inset .text-center}
+```{r}
+#| echo: false
+#| warning: false
+shiny::tagList(
+shiny::tags$a(
+  class="btn btn-outline-dark", 
+  href="https://github.com/mhanf",
+  target="_blank",
+  rel="noopener noreferrer",
+  fontawesome::fa("github")
+),
+shiny::tags$a(
+  class="btn btn-outline-dark", 
+  href="https://www.linkedin.com/in/matthieu-hanf-a03377104/",
+  target="_blank",
+  rel="noopener noreferrer",
+  fontawesome::fa("linkedin")
+),
+shiny::tags$a(
+  class="btn btn-outline-dark", 
+  href="https://orcid.org/0000-0001-7133-1323",
+  target="_blank",
+  rel="noopener noreferrer",
+  fontawesome::fa("orcid")
+),
+shiny::tags$a(
+  class="btn btn-outline-dark", 
+  href="mailto:matthieu.hanf@gmail.com",
+  target="_blank",
+  rel="noopener noreferrer",
+  fontawesome::fa("envelope")
+)
+)
+```
+:::

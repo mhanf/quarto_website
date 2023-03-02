@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Matthieu Hanf"
+  navbar:
+    background: dark
+    foreground: light
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - research.qmd
+      - software.qmd
+      
+format:
+  html:
+    theme: journal
+    css: styles.css
+    toc: true
+
+
