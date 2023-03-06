@@ -9,17 +9,14 @@ resources:
 ::: column-page-inset
 ::: {.column-page-inset-left .text-left}
 
-I am Head of Data in a NPO working with the Île-de-France Regional Health Agency.
-
-I like to construct tools from data that make insights for health professionals & patients.
+I like to design tools from data that make insights for health professionals & patients.
 
 I am a R & Python enthusiast.
-
-I am a Research Associate in Statistics & Epidemiology at Inserm.
 
 I live in Paris with my family.
 
 For more check out my resume and projects.
+
 :::
 
 ::: {.column-margin .column-container}

@@ -4,6 +4,8 @@ title: "About"
 
 I am currently Head of Data at Sesan, a non-profit organization working with the Île-de-France Regional Health Agency (Paris area).
 
+I am also a Research Associate in Statistics & Epidemiology at Inserm.
+
 ### Research Interests
 
 -   Biostatistics

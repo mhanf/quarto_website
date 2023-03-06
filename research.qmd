@@ -9,6 +9,7 @@ title: "Research"
 library(shiny)
 library(bslib)
 library(readxl)
+library(fontawesome)
 
 badge <- function(x,color){
   class <- paste0("badge bg-transparent border border-",color," text-",color," fw-normal")
@@ -55,6 +56,27 @@ list_biblio <- function(i) {
   
   return(tagList(html_bib))
 }
+```
+
+
+
+
+Here are my publications.
+
+```{r}
+#| echo: false
+#| warning: false
+div(
+"My research areas revolve around Statistics & Data Science",
+badge(icon("wrench"),"dark"),
+", Infectious Diseases",
+badge(fa("virus"),"dark"),
+", Pediatrics",
+badge(fa("child"),"dark"),
+" and Women Health",
+badge(fa("female"),"dark"),
+" epidemiology."
+)
 ```
 ### 2022
 ```{r}
