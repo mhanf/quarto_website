@@ -6,14 +6,6 @@ I am currently Head of Data at Sesan, a non-profit organization working with the
 
 I am also a Research Associate in Statistics & Epidemiology at Inserm.
 
-### Research Interests
-
--   Biostatistics
--   Machine Learning
--   Data Science
--   Infectious Diseases
--   Maternal & Child Health
-
 ### Education
 
 ::: {.d-flex .justify-content-between}
@@ -203,6 +195,9 @@ Cayenne, French Guiana\
 -   Manage data from hospital databases, cohorts & registries
 -   Help health professionals to analyse epidemiological data
 -   Perform advanced biostatistics analyses
+
+
+
 
 ### Teaching
 

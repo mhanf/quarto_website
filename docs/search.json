@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "I am also a Research Associate in Statistics & Epidemiology at Inserm.\n\nResearch Interests\n\nBiostatistics\nMachine Learning\nData Science\nInfectious Diseases\nMaternal & Child Health\n\n\n\nEducation\n\n\nUniversity of Versailles Saint Quentin\nAccreditation to supervise research (HDR)\n\n\nParis, France\n2017\n\n\n\nTitle: Implications of a systemic approach to health in epidemiology\n\n\n\nUniversity of French Antilles and Guiana\nPhD in epidemiology\n\n\nCayenne, French Guiana\n2011\n\n\n\nTitle: Value of open data in infectious diseases epidemiology\n\n\n\nAgroPariTech\nMSc in life and environmental sciences and technologies\n\n\nParis, France\n2006\n\n\n\n\nUniversity of Paris-Sud 11\nMSc in stochastic and statistical Modeling\n\n\nParis, France\n2006\n\n\n\n\nAcademic Experience\n\n\nInserm/University of Paris-Saclay/ University of Versailles Saint Quentin\nHigh dimensional biostatistics, UMR 1018\n\n\nVillejuif, France\nJuly 2016 - present\n\n\nAssociate Researcher\n\n\nInserm/University of Paris-Saclay/ University of Versailles Saint Quentin\nHigh dimensional biostatistics, UMR 1018\n\n\nVillejuif, France\n2012 - 2013\n\n\nPost-doctoral fellow\n\n\nUniversity of French Antilles and Guiana\nEpidemiology of Tropical diseases, EA 3593\n\n\nCayenne, French Guiana\n2009 - 2011\n\n\nPhD fellow\n\n\nInserm\nClinical trials in infectious diseases, SC10-US019\n\n\nVillejuif, France\n2007 - 2008\n\n\nResearch Engineer\n\n\nProfessional Experience\n\n\nSesan\nHead of data\n\n\nParis, France\nMay 2018 - present\n\n\n\nManage a multidisciplinary team (23 persons)\n\nHelp health professionals to identify their data needs\n\nDesign data infrastructure to collect, organize, document, and track regional health data\n\nDevelop repeatable processes and structures for regular analysis and reports\n\nCreate and maintain visualizations, dashboards and services from health data\n\nConduct descriptive and predictive analyses\n\n\n\nNantes University Hospital\nEpidemiologist\n\n\nNantes, France\n2013 - 2018\n\n\n\nDevelop studies in infectious diseases and child & maternal epidemiology\nManage data from hospital / regional databases, cohorts & registries\nHelp health professionals to develop epidemiological studies\nPerform advanced biostatistics analyses\nTeach Biostatistics & Epidemiology\n\n\n\nCayenne General Hospital\nBiostatistician\n\n\nCayenne, French Guiana\n2013 - 2018\n\n\n\nDevelop studies in tropical diseases epidemiology\nManage data from hospital databases, cohorts & registries\nHelp health professionals to analyse epidemiological data\nPerform advanced biostatistics analyses\n\n\n\nTeaching\n(Work In Progress)"
+    "text": "I am currently Head of Data at Sesan, a non-profit organization working with the Île-de-France Regional Health Agency (Paris area).\nI am also a Research Associate in Statistics & Epidemiology at Inserm.\n\nEducation\n\n\nUniversity of Versailles Saint Quentin\nAccreditation to supervise research (HDR)\n\n\nParis, France\n2017\n\n\n\nTitle: Implications of a systemic approach to health in epidemiology\n\n\n\nUniversity of French Antilles and Guiana\nPhD in epidemiology\n\n\nCayenne, French Guiana\n2011\n\n\n\nTitle: Value of open data in infectious diseases epidemiology\n\n\n\nAgroPariTech\nMSc in life and environmental sciences and technologies\n\n\nParis, France\n2006\n\n\n\n\nUniversity of Paris-Sud 11\nMSc in stochastic and statistical Modeling\n\n\nParis, France\n2006\n\n\n\n\nAcademic Experience\n\n\nInserm/University of Paris-Saclay/ University of Versailles Saint Quentin\nHigh dimensional biostatistics, UMR 1018\n\n\nVillejuif, France\nJuly 2016 - present\n\n\nAssociate Researcher\n\n\nInserm/University of Paris-Saclay/ University of Versailles Saint Quentin\nHigh dimensional biostatistics, UMR 1018\n\n\nVillejuif, France\n2012 - 2013\n\n\nPost-doctoral fellow\n\n\nUniversity of French Antilles and Guiana\nEpidemiology of Tropical diseases, EA 3593\n\n\nCayenne, French Guiana\n2009 - 2011\n\n\nPhD fellow\n\n\nInserm\nClinical trials in infectious diseases, SC10-US019\n\n\nVillejuif, France\n2007 - 2008\n\n\nResearch Engineer\n\n\nProfessional Experience\n\n\nSesan\nHead of data\n\n\nParis, France\nMay 2018 - present\n\n\n\nManage a multidisciplinary team (23 persons)\n\nHelp health professionals to identify their data needs\n\nDesign data infrastructure to collect, organize, document, and track regional health data\n\nDevelop repeatable processes and structures for regular analysis and reports\n\nCreate and maintain visualizations, dashboards and services from health data\n\nConduct descriptive and predictive analyses\n\n\n\nNantes University Hospital\nEpidemiologist\n\n\nNantes, France\n2013 - 2018\n\n\n\nDevelop studies in infectious diseases and child & maternal epidemiology\nManage data from hospital / regional databases, cohorts & registries\nHelp health professionals to develop epidemiological studies\nPerform advanced biostatistics analyses\nTeach Biostatistics & Epidemiology\n\n\n\nCayenne General Hospital\nBiostatistician\n\n\nCayenne, French Guiana\n2013 - 2018\n\n\n\nDevelop studies in tropical diseases epidemiology\nManage data from hospital databases, cohorts & registries\nHelp health professionals to analyse epidemiological data\nPerform advanced biostatistics analyses\n\n\n\nTeaching\n(Work In Progress)"
   },
   {
     "objectID": "index.html",
@@ -25,13 +25,27 @@
     "href": "software.html",
     "title": "Projects",
     "section": "",
-    "text": "Here are my software projects.\nDuring my free & professional time, I like to play with R, HTML, CSS, and Javascript to construct R shiny packages that help to quickly design apps ready for production (and maximize time for Data Science & Research)."
+    "text": "Here are my software projects."
   },
   {
     "objectID": "software.html#personal-projects",
     "href": "software.html#personal-projects",
     "title": "Projects",
     "section": "Personal projects",
-    "text": "Personal projects"
+    "text": "Personal projects\n\n\n\n\n\n\n\n\n\n\nShinyRating\nShinyRating is an R package that allow to create rating inputs in Shiny. Optimized for Bootstrap 5 \n\n\nGithub\n\n\n\n\n\n\n\nShinyFriendlyCaptcha\nShinyFriendlyCaptcha is a R package that provide a GDPR compliant Captcha  to Shiny apps ((Friendly Captcha). Friendly Captcha is an European alternative to Google Recaptcha. It allow to protect websites against spam and bots in a privacy-embedded design.\n\n\nGithub\n\n\n\n\n\n\n\nShinyLemonPie\nWork In Progress\n\n\nGithub"
+  },
+  {
+    "objectID": "software.html#packages",
+    "href": "software.html#packages",
+    "title": "Projects",
+    "section": "Packages",
+    "text": "Packages\nDuring my free & professional time, I like to play with R, HTML, CSS, and Javascript to construct R shiny packages that facilitate the design of apps ready for production (and maximize time for Data Science & Research).\n\n\n\n\n\n\n\n\n\n\nShinyRating\nShinyRating is an R package that allow to create rating inputs in Shiny. Optimized for Bootstrap 5 \n\n\nGithub\n\n\n\n\n\n\n\nShinyFriendlyCaptcha\nShinyFriendlyCaptcha is a R package that provide a GDPR compliant Captcha  to Shiny apps ((Friendly Captcha). Friendly Captcha is an European alternative to Google Recaptcha. It allow to protect websites against spam and bots in a privacy-embedded design.\n\n\nGithub\n\n\n\n\n\n\n(Work In Progress)"
+  },
+  {
+    "objectID": "software.html#shiny-apps",
+    "href": "software.html#shiny-apps",
+    "title": "Projects",
+    "section": "Shiny Apps",
+    "text": "Shiny Apps\n(Work In Progress)"
   }
 ]

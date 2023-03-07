@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.189">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -80,23 +80,27 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html">Home</a>
+    <a class="nav-link" href="./index.html">
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html">About</a>
+    <a class="nav-link" href="./about.html">
+ <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./research.html">Research</a>
+    <a class="nav-link" href="./research.html">
+ <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./software.html" aria-current="page">Projects</a>
+    <a class="nav-link active" href="./software.html" aria-current="page">
+ <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/mhanf"><i class="bi bi-github" role="img">
 </i> 
- </a>
+ <span class="menu-text"></span></a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -113,7 +117,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#personal-projects" id="toc-personal-projects" class="nav-link active" data-scroll-target="#personal-projects">Personal projects</a></li>
+  <li><a href="#packages" id="toc-packages" class="nav-link active" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#shiny-apps" id="toc-shiny-apps" class="nav-link" data-scroll-target="#shiny-apps">Shiny Apps</a></li>
   </ul>
 </nav>
     </div>
@@ -130,6 +135,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -137,9 +143,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Here are my software projects.</p>
-<p>During my free &amp; professional time, I like to play with R, HTML, CSS, and Javascript to construct R shiny packages that help to quickly design apps ready for production (and maximize time for Data Science &amp; Research).</p>
-<section id="personal-projects" class="level2">
-<h2 class="anchored" data-anchor-id="personal-projects">Personal projects</h2>
+<section id="packages" class="level2">
+<h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<p>During my free &amp; professional time, I like to play with R, HTML, CSS, and Javascript to construct R shiny packages that facilitate the design of apps ready for production (and maximize time for Data Science &amp; Research).</p>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="grid">
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100">
+<img src="image/shinyrating.png" class="card-img-top mx-auto mt-2" style="width:33%" alt="...">
+<div class="card-body">
+<h5 class="card-title anchored">ShinyRating</h5>
+<div class="fs-6 lead text-muted">ShinyRating is an R package that allow to create rating inputs in Shiny. Optimized for Bootstrap 5 </div>
+</div>
+<div class="card-footer bg-white text-center">
+<a href="posts.qmd" class="card-link second-color-link heading-font">Github</a>
+</div>
+</div>
+</div>
+<div class="g-col-12 g-col-md-6">
+<div class="card h-100">
+<img src="image/shinyfriendlycaptcha.png" class="card-img-top mx-auto mt-2" style="width:33%" alt="...">
+<div class="card-body">
+<h5 class="card-title anchored">ShinyFriendlyCaptcha</h5>
+<div class="fs-6 lead text-muted">ShinyFriendlyCaptcha is a R package that provide a GDPR compliant Captcha  to Shiny apps ((Friendly Captcha). Friendly Captcha is an European alternative to Google Recaptcha. It allow to protect websites against spam and bots in a privacy-embedded design.</div>
+</div>
+<div class="card-footer bg-white text-center">
+<a href="posts.qmd" class="card-link second-color-link heading-font">Github</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>(Work In Progress)</p>
+</section>
+<section id="shiny-apps" class="level2">
+<h2 class="anchored" data-anchor-id="shiny-apps">Shiny Apps</h2>
+<p>(Work In Progress)</p>
 
 
 </section>
@@ -186,7 +230,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -222,24 +283,42 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

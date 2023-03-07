@@ -4,8 +4,77 @@ title: "Projects"
 
 Here are my software projects. 
 
-During my free & professional time, I like to play with R, HTML, CSS, and Javascript  to construct R shiny packages that help to quickly design apps ready for production (and maximize time for Data Science & Research).
+## Packages
 
-## Personal projects
+During my free & professional time, I like to play with R, HTML, CSS, and Javascript to construct R shiny packages that facilitate the design of apps ready for production (and maximize time for Data Science & Research).
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(bslib)
+library(shiny)
+card_modif <- function(img,href,title,body){
+  div(class = "g-col-12 g-col-md-6",
+      #div(class="cell h-100",
+          # div(class = "cell-output-display",
+          #     style = "height:100% !important",
+  div(class="card h-100",
+        tags$img(
+          src=img,
+          class="card-img-top mx-auto mt-2",
+          style = "width:33%",
+          alt="..."
+        ),
+        div(class = "card-body",
+            h5(class="card-title",title),
+            div(class="fs-6 lead text-muted",body),
+                ),
+      div(
+              class="card-footer bg-white text-center",
+              tags$a(
+                href="posts.qmd",
+                class="card-link second-color-link heading-font",
+                "Github"
+              ))
+              
+              
+            )
+            )
+
+}
+
+```
 
 
+```{r}
+#| echo: false
+#| warning: false
+
+    div(class="grid",
+card_modif(
+        img = "image/shinyrating.png",
+        href = "https://github.com/rstudio/shiny",
+        title = "ShinyRating",
+        body = "ShinyRating is an R package that allow to create rating inputs in Shiny. Optimized for Bootstrap 5 "
+        ),
+card_modif(
+        img = "image/shinyfriendlycaptcha.png",
+        href = "https://github.com/rstudio/shiny",
+        title = "ShinyFriendlyCaptcha",
+        body = "ShinyFriendlyCaptcha is a R package that provide a GDPR compliant Captcha  to Shiny apps ((Friendly Captcha). Friendly Captcha is an European alternative to Google Recaptcha. It allow to protect websites against spam and bots in a privacy-embedded design."
+        )#,
+# card_modif(
+#         img = "",
+#         href = "https://github.com/rstudio/shiny",
+#         title = "ShinyLemonPie",
+#         body = "Work In Progress"
+#         )
+)
+```
+
+(Work In Progress)
+
+## Shiny Apps
+
+(Work In Progress)
