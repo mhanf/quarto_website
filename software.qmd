@@ -14,39 +14,46 @@ During my free & professional time, I like to play with R, HTML, CSS, and Javasc
 
 library(bslib)
 library(shiny)
-card_modif <- function(img,href,title,body){
-  div(class = "g-col-12 g-col-md-6",
-      #div(class="cell h-100",
-          # div(class = "cell-output-display",
-          #     style = "height:100% !important",
-  div(class="card h-100",
-        tags$img(
-          src=img,
-          class="card-img-top mx-auto mt-2",
-          style = "width:33%",
-          alt="..."
+
+card_modif <- function(
+    img,
+    href,
+    title,
+    body,
+    icon_lock = "lock-open",
+    icon_link="github",
+    text_lock = "Open"
+    ){
+  div(
+    class = "g-col-12 g-col-md-6",
+    div(
+      class="card h-100",
+      tags$img(
+        src=img,
+        class="card-img-top mx-auto mt-2",
+        style = "width:33%",
+        alt="..."
         ),
-        div(class = "card-body",
-            h5(class="card-title",title),
-            div(class="fs-6 lead text-muted",body),
-                ),
+      div(class = "card-body",
+          h5(class="card-title",title),
+          div(class="fs-6 lead text-muted",body),
+          ),
       div(
-              class="card-footer bg-white text-center",
-              div(class="d-flex justify-content-between align-items-center",
-                  "Public",
-              tags$a(
-                href = href,
-                class="btn m-1 btn-outline-dark",
-                fontawesome::fa("arrow-up-right-from-square"),
-                fontawesome::fa("github")
-              )
-              )
+        class="card-footer bg-white text-center",
+        div(
+          class="d-flex justify-content-between align-items-center",
+          div(fontawesome::fa(icon_lock), text_lock, class = "fw-bold"),
+          tags$a(
+            href = href,
+            class="btn m-1 btn-outline-dark",
+            fontawesome::fa("arrow-up-right-from-square"),
+            fontawesome::fa(icon_link)
             )
-            )
-  )
-
+          )
+        )
+      )
+    )
 }
-
 ```
 
 
@@ -54,29 +61,52 @@ card_modif <- function(img,href,title,body){
 #| echo: false
 #| warning: false
 
-    div(class="grid",
-card_modif(
-        img = "image/shinyrating.png",
-        href = "https://github.com/mhanf/ShinyRating",
-        title = "ShinyRating",
-        body = "ShinyRating is an R package that allow to create rating inputs in Shiny. Optimized for Bootstrap 5 "
-        ),
-card_modif(
-        img = "image/shinyfriendlycaptcha.png",
-        href = "https://github.com/mhanf/ShinyFriendlyCaptcha",
-        title = "ShinyFriendlyCaptcha",
-        body = "ShinyFriendlyCaptcha is a R package that provide a GDPR compliant Captcha  to Shiny apps ((Friendly Captcha). Friendly Captcha is an European alternative to Google Recaptcha. It allow to protect websites against spam and bots in a privacy-embedded design."
-        )#,
-# card_modif(
-#         img = "",
-#         href = "https://github.com/rstudio/shiny",
-#         title = "ShinyLemonPie",
-#         body = "Work In Progress"
-#         )
+div(
+  class="grid",
+  card_modif(
+    img = "image/shinyrating.png",
+    href = "https://github.com/mhanf/ShinyRating",
+    title = "ShinyRating",
+    icon_lock = "lock-open",
+    text_lock = "Open",
+    icon_link="github",
+    body = "ShinyRating is an R package that allow to create rating inputs in Shiny. Several options
+    are available (type, number, color, size, margin, tooltip, mode and animation of icons)."
+      ),
+  card_modif(
+    img = "image/shinyfriendlycaptcha.png",
+    href = "https://github.com/mhanf/ShinyFriendlyCaptcha",
+    title = "ShinyFriendlyCaptcha",
+    icon_lock = "lock-open",
+    text_lock = "Open",
+    icon_link="github",
+    body = "Friendly Captcha is a GDPR compliant European alternative to Google Recaptcha.
+    ShinyFriendlyCaptcha is a R package that provide Friendly Captcha to Shiny apps."
+  ),
+  card_modif(
+    img = "image/interfacer.png",
+    href = "https://www.sesan.fr/",
+    title = "Interfacer",
+    icon_lock = "lock",
+    text_lock = "Private",
+    icon_link="globe",
+    body = "Interfacer is an R package developped for Sesan that allows to simplify the development,
+    layout, theme design and deployment of complex
+    web forms using Shiny."
+),
+  card_modif(
+    img = "image/authentifier.png",
+    href = "https://www.sesan.fr/",
+    title = "Authentifier",
+    icon_lock = "lock",
+    text_lock = "Private",
+    icon_link="globe",
+    body = "Authentifier is an R package developped for Sesan that add a simple, 
+    strong or openID authentication layer as well as a 
+    user account management toolbar to Shiny apps."
+    )
 )
 ```
-
-(Work In Progress)
 
 ## Shiny Apps
 
