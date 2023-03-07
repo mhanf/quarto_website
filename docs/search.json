@@ -39,7 +39,7 @@
     "href": "software.html#packages",
     "title": "Projects",
     "section": "Packages",
-    "text": "Packages\nDuring my free & professional time, I like to play with R, HTML, CSS, and Javascript to construct R shiny packages that facilitate the design of apps ready for production (and maximize time for Data Science & Research).\n\n\n\n\n\n\n\n\n\n\nShinyRating\nShinyRating is an R package that allow to create rating inputs in Shiny. Optimized for Bootstrap 5 \n\n\nGithub\n\n\n\n\n\n\n\nShinyFriendlyCaptcha\nShinyFriendlyCaptcha is a R package that provide a GDPR compliant Captcha  to Shiny apps ((Friendly Captcha). Friendly Captcha is an European alternative to Google Recaptcha. It allow to protect websites against spam and bots in a privacy-embedded design.\n\n\nGithub\n\n\n\n\n\n\n(Work In Progress)"
+    "text": "Packages\nDuring my free & professional time, I like to play with R, HTML, CSS, and Javascript to construct R shiny packages that facilitate the design of apps ready for production (and maximize time for Data Science & Research).\n\n\n\n\n\n\n\n\n\n\nShinyRating\nShinyRating is an R package that allow to create rating inputs in Shiny. Optimized for Bootstrap 5 \n\n\n\nPublic\n\n\n\n\n\n\n\n\n\n\n\n\nShinyFriendlyCaptcha\nShinyFriendlyCaptcha is a R package that provide a GDPR compliant Captcha  to Shiny apps ((Friendly Captcha). Friendly Captcha is an European alternative to Google Recaptcha. It allow to protect websites against spam and bots in a privacy-embedded design.\n\n\n\nPublic\n\n\n\n\n\n\n\n\n\n\n\n(Work In Progress)"
   },
   {
     "objectID": "software.html#shiny-apps",

@@ -32,15 +32,18 @@ card_modif <- function(img,href,title,body){
                 ),
       div(
               class="card-footer bg-white text-center",
+              div(class="d-flex justify-content-between align-items-center",
+                  "Public",
               tags$a(
-                href="posts.qmd",
-                class="card-link second-color-link heading-font",
-                "Github"
-              ))
-              
-              
+                href = href,
+                class="btn m-1 btn-primary",
+                fontawesome::fa("arrow-up-right-from-square"),
+                fontawesome::fa("github")
+              )
+              )
             )
             )
+  )
 
 }
 
@@ -54,13 +57,13 @@ card_modif <- function(img,href,title,body){
     div(class="grid",
 card_modif(
         img = "image/shinyrating.png",
-        href = "https://github.com/rstudio/shiny",
+        href = "https://github.com/mhanf/ShinyRating",
         title = "ShinyRating",
         body = "ShinyRating is an R package that allow to create rating inputs in Shiny. Optimized for Bootstrap 5 "
         ),
 card_modif(
         img = "image/shinyfriendlycaptcha.png",
-        href = "https://github.com/rstudio/shiny",
+        href = "https://github.com/mhanf/ShinyFriendlyCaptcha",
         title = "ShinyFriendlyCaptcha",
         body = "ShinyFriendlyCaptcha is a R package that provide a GDPR compliant Captcha  to Shiny apps ((Friendly Captcha). Friendly Captcha is an European alternative to Google Recaptcha. It allow to protect websites against spam and bots in a privacy-embedded design."
         )#,
