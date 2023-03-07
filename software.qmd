@@ -36,7 +36,7 @@ card_modif <- function(img,href,title,body){
                   "Public",
               tags$a(
                 href = href,
-                class="btn m-1 btn-primary",
+                class="btn m-1 btn-outline-dark",
                 fontawesome::fa("arrow-up-right-from-square"),
                 fontawesome::fa("github")
               )
