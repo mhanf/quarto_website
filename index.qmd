@@ -1,64 +1,131 @@
----
-title: "Health Data Science"
-page-layout: full
-image: /social-card.jpg
-resources:
-    - "social-card.jpg"
----
 
-::: column-page-inset
-::: {.column-page-inset-left .text-left}
 
-I like to design tools from data that make insights for health professionals & patients.
-
-I am a R & Python enthusiast.
-
-I live in Paris with my family.
-
-For more check out my resume and projects.
-
-:::
-
-::: {.column-margin .column-container}
-![](image/6_SESAN_017carre.jpg){.rounded-circle}
-:::
-:::
-
-{{< pagebreak >}}
-
-::: {.column-page-inset .text-center}
 ```{r}
 #| echo: false
 #| warning: false
-shiny::tagList(
+library(shiny)
+
+source("R/accordeon.R")
+
+card_code <- function(title,body){
+     div(
+      class="card shadow m-2 border-primary border border-1 rounded-0 text-primary",
+      div(
+        class="card-header bg-white text-primary border-1 border-primary fw-bold justify-content-between d-flex",
+        tags$span(title),
+        tags$span("-")
+          ),
+      div(class="card-body", body)
+) 
+}
+
+body_hello <- tagList(
+  p(
+    class="m-1",
+    "Hi, my name is ",
+    tags$strong("Matthieu Hanf.")
+    ),
+  p(
+    class="m-1",
+    "> I'm passionnate about ",
+    tags$strong("Data Science.")
+    ),
+  p(
+    class="m-1",
+    "> I like to design tools from data that ",
+    tags$strong("make insights for health professionals & patients.")
+    ),
+  p(
+    class="m-1",
+    "> I live in Paris with ",
+    tags$strong("my family.")
+    ),
+  br(),
+  p(
+    class="m-1",
+    "For more :"
+  ),
+  p(
+    class="m-1",
+    "> ",
+    tags$a(class = "fw-bold", "Resume", href = "about.qmd"),
+    "> ",
+    tags$a(class = "fw-bold", "Research", href = "research.qmd"),
+    "> ",
+    tags$a(class = "fw-bold", "Project", href = "software.qmd")
+    )
+)
+
+body_contact <- tagList(
+  p(
+    class="m-1",
+    "> ",
+    tags$strong("I will be glad to hear from you.")
+    ),
+  p(
+    class="m-1",
+    "> You can find me elsewhere."
+    ),
+  div(class="text-center",
 shiny::tags$a(
-  class="btn btn-outline-dark", 
+  class="btn bg-white text-primary", 
   href="https://github.com/mhanf",
   target="_blank",
   rel="noopener noreferrer",
   fontawesome::fa("github")
 ),
 shiny::tags$a(
-  class="btn btn-outline-dark", 
+  class="btn bg-white text-primary", 
   href="https://www.linkedin.com/in/matthieu-hanf-a03377104/",
   target="_blank",
   rel="noopener noreferrer",
   fontawesome::fa("linkedin")
 ),
 shiny::tags$a(
-  class="btn btn-outline-dark", 
+  class="btn bg-white text-primary", 
   href="https://orcid.org/0000-0001-7133-1323",
   target="_blank",
   rel="noopener noreferrer",
   fontawesome::fa("orcid")
 ),
 shiny::tags$a(
-  class="btn btn-outline-dark", 
+  class="btn bg-white text-primary", 
   href="mailto:matthieu.hanf@gmail.com",
   target="_blank",
   rel="noopener noreferrer",
   fontawesome::fa("envelope")
 )
-)
+))
+
+
+
+
+div(
+  class="grid",
+  # photo
+  div(
+    class = "g-col-12 g-col-md-8 align-self-center",
+    accordeon_code(
+      title = "> HELLO WORLD !",
+      body = body_hello,
+      id = "hello")
+  ),
+  # hello
+  div(
+    class = "g-col-12 g-col-md-4 align-self-center",
+    accordeon_code(
+      title = "> PICTURE",
+      body = img(src = "image/6_SESAN_017carre3.png",class="img-fluid rounded"),
+      id = "photo"
+      )
+),
+# empty line
+empty_line(size = 1),
+div(
+    class = "g-col-12  g-col-md-8 justify-content-left",
+    accordeon_code(
+      title = "> CONTACT",
+      body = body_contact,
+      id = "contact")
+))
 ```
-:::

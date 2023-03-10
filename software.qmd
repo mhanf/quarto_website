@@ -27,7 +27,7 @@ card_modif <- function(
   div(
     class = "g-col-12 g-col-md-6",
     div(
-      class="card h-100",
+      class="card h-100 border-0 shadow",
       tags$img(
         src=img,
         class="card-img-top mx-auto mt-2",
@@ -42,10 +42,10 @@ card_modif <- function(
         class="card-footer bg-white text-center",
         div(
           class="d-flex justify-content-between align-items-center",
-          div(fontawesome::fa(icon_lock), text_lock, class = "fw-bold"),
+          div(fontawesome::fa(icon_lock), text_lock, class = "fw-bold text-primary"),
           tags$a(
             href = href,
-            class="btn m-1 btn-outline-dark",
+            class="btn m-1 text-primary",
             fontawesome::fa("arrow-up-right-from-square"),
             fontawesome::fa(icon_link)
             )
@@ -62,7 +62,7 @@ card_modif <- function(
 #| warning: false
 
 div(
-  class="grid",
+  class="grid p-4",
   card_modif(
     img = "image/shinyrating.png",
     href = "https://github.com/mhanf/ShinyRating",

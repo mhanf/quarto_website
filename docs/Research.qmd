@@ -1,0 +1,162 @@
+---
+title: "Research"
+---
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(shiny)
+library(bslib)
+library(readxl)
+library(fontawesome)
+
+badge <- function(x,color){
+  class <- paste0("badge bg-transparent border border-",color," text-",color," fw-normal")
+  badge <-  tags$span(class=class,x)
+  return(badge)
+}
+
+# bibliography loading
+bibliography <- read_excel("data/bibliography.xlsx")
+
+# compilation of bibliography
+list_biblio <- function(i) {
+  bibliography_year  <- bibliography[bibliography$year == i,]
+  html_bib <- lapply( 1:dim(bibliography_year)[1], function(j) {
+    div(class="list-group-item text-dark text-start",
+        tags$span(
+          #class="text-dark fs-6",
+          bibliography_year$title[j]
+        ),
+        tags$span(
+          class="text-primary",
+          bibliography_year$journal[j]
+        ),
+        div(
+          class="d-flex justify-content-between mt-1 mb-2",
+          div(
+            badge(bibliography_year$author_place[j],"dark"),
+            tags$a(
+              href=bibliography_year$url[j],
+              role="button",
+              class="badge bg-transparent border border-dark text-dark fw-normal",
+              icon("globe")
+            )
+          ),
+          div(
+            if (bibliography_year$tag_infectious[j]==1){badge(fontawesome::fa("virus"),"dark")},
+            if (bibliography_year$tag_child[j]==1){badge(fontawesome::fa("child"),"dark")},
+            if (bibliography_year$tag_women[j]==1){badge(fontawesome::fa("female"),"dark")},
+            if (bibliography_year$tag_method[j]==1){badge(fontawesome::fa("wrench"),"dark")}
+          )
+        )
+    )
+  })
+  
+  return(tagList(html_bib))
+}
+```
+
+
+
+
+Here are my publications.
+
+```{r}
+#| echo: false
+#| warning: false
+div(
+"My research areas revolve around Statistics & Data Science",
+badge(icon("wrench"),"dark"),
+", Infectious Diseases",
+badge(fa("virus"),"dark"),
+", Pediatrics",
+badge(fa("child"),"dark"),
+" and Women Health",
+badge(fa("female"),"dark"),
+" epidemiology."
+)
+```
+### 2022
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2022")
+```
+### 2020
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2020")
+```
+### 2019
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2019")
+```
+### 2018
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2018")
+```
+### 2017
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2017")
+```
+### 2016
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2016")
+```
+### 2015
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2015")
+```
+### 2014
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2014")
+```
+### 2013
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2013")
+```
+### 2012
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2012")
+```
+### 2011
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2011")
+```
+### 2010
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2010")
+```
+### 2009
+```{r}
+#| echo: false
+#| warning: false
+list_biblio("2009")
+```
+
+
+
+

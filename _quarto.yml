@@ -3,17 +3,18 @@ project:
   output-dir: docs
 
 website:
-  title: "Matthieu Hanf"
-  site-url: https://www.quantumjitter.com
+  title: "> MATTHIEU HANF"
+  site-url: mhanf.github.io/quarto_website/
   navbar:
-    background: dark
-    foreground: light
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-      - research.qmd
-      - software.qmd
+      - href: about.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: software.qmd
+        text: Project
     right:
       - icon: github
         href: https://github.com/mhanf
@@ -21,12 +22,13 @@ website:
   page-footer:
     border: false
     left: "Published with [Quarto](https://quarto.org/) | Hosted by [Github](https://www.github.com)"
-    right: "© 2023 [Matthieu Hanf](/about) | [MIT License](https://opensource.org/license/mit-0/)"
+    right: "© 2023 Matthieu Hanf | [MIT License](https://opensource.org/license/mit-0/)"
       
 format:
   html:
-    theme: journal
-    css: styles.css
-    toc: true
+    theme:
+      light: custom.scss
+    smooth-scroll: true
+    link-external-newwindow: true
 
 

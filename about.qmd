@@ -1,204 +1,407 @@
----
-title: "About"
----
 
-I am currently Head of Data at Sesan, a non-profit organization working with the Île-de-France Regional Health Agency (Paris area).
+```{r}
+#| echo: false
+#| warning: false
+library(shiny)
+library(fontawesome)
+source("R/accordeon.R")
 
-I am also a Research Associate in Statistics & Epidemiology at Inserm.
 
-### Education
+# Summary
+body_summary <- tagList(
+  p(
+    class="m-1 fw-bold",
+    "I'm currently Head of Data at",
+    tags$a(
+        "Sesan",
+        href = "https://www.sesan.fr/",
+        target="_blank",
+        rel="noopener noreferrer"
+        ),
+    "(eHealth NPO)"),
+   p(
+    class="m-1",
+    "> Data Warehouse, Prediction Model and DataViz design for Health Professionals"
+   ),
+  p(
+    class="m-1 fw-bold",
+    "I'm also a Research Associate at ",
+    tags$a(
+        "Inserm",
+        href = "https://www.inserm.fr/en/home/",
+        target="_blank",
+        rel="noopener noreferrer"
+        )
+    ),
+   p(
+    class="m-1",
+    "> Statistics & Epidemiolgy"
+   ),
+  p(
+    class="m-1 fw-bold",
+    " I'm proficient in R & Python but is happy to experiment with others languages, frameworks & tools related to Data Science"
+   )
+)
 
-::: {.d-flex .justify-content-between}
-<div>
+# Education
+body_education <- tagList(
+  resume_code(
+    title = "University of Versailles Saint Quentin", 
+    subtitle = "> Accreditation to supervise research (HDR)",
+    place = "Paris, France", 
+    date = "2017"
+    ),
+  resume_code(
+    title = "University of French Antilles and Guyana", 
+    subtitle = "> PhD in epidemiology",
+    place = "Cayenne, French Guyana", 
+    date = "2011"
+    ),
+  resume_code(
+    title = "AgroPariTech", 
+    subtitle = "> MSc in life and environmental sciences",
+    place = "Paris, France", 
+    date = "2006"
+    ),
+  resume_code(
+    title = "University of Paris-Sud 11", 
+    subtitle = "> MSc in stochastic and statistical Modeling",
+    place = "Paris, France", 
+    date = "2006"
+    )
+)
 
-**University of Versailles Saint Quentin**\
-Accreditation to supervise research (HDR)
+# academic
+body_academic <- tagList(
+  resume_code(
+    title = "Inserm/University of Paris-Saclay", 
+    subtitle = "High dimensional biostatistics, UMR 1018",
+    text = "> Associate Researcher",
+    place = "Villejuif, France", 
+    date = "2016 - present"
+    ),
+  resume_code(
+    title = "Inserm/University of Paris-Saclay", 
+    subtitle = "High dimensional biostatistics, UMR 1018",
+    text = "> Post-doctoral fellow",
+    place = "Villejuif, France", 
+    date = "2016 - present"
+    ),
+  resume_code(
+    title = "University of French Antilles and Guyana", 
+    subtitle = "Epidemiology of Tropical diseases, EA 3593",
+    text = "> PhD fellow",
+    place = "Cayenne, French Guyana", 
+    date = "2009 - 2011"
+    ),
+  resume_code(
+    title = "Inserm", 
+    subtitle = "Infectious diseases clinical trials, US019",
+    text = "> Research Engineer",
+    place = "Villejuif, France", 
+    date = "2007 - 2008"
+    )
+)
 
-</div>
-
-::: text-end
-Paris, France\
-2017
-:::
-:::
-
--   Title: *Implications of a systemic approach to health in epidemiology*
-
-::: {.d-flex .justify-content-between}
-<div>
-
-**University of French Antilles and Guiana**\
-PhD in epidemiology
-
-</div>
-
-::: text-end
-Cayenne, French Guiana\
-2011
-:::
-:::
-
--   Title: *Value of open data in infectious diseases epidemiology*
-
-::: {.d-flex .justify-content-between}
-<div>
-
-**AgroPariTech**\
-MSc in life and environmental sciences and technologies
-
-</div>
-
-::: text-end
-Paris, France\
-2006
-:::
-:::
-
-::: {.d-flex .justify-content-between}
-<div>
-
-**University of Paris-Sud 11**\
-MSc in stochastic and statistical Modeling
-
-</div>
-
-::: text-end
-Paris, France\
-2006
-:::
-:::
-
-### Academic Experience
-
-::: {.d-flex .justify-content-between}
-<div>
-
-**Inserm/University of Paris-Saclay/ University of Versailles Saint Quentin**\
-High dimensional biostatistics, UMR 1018
-
-</div>
-
-::: text-end
-Villejuif, France\
-July 2016 - present
-:::
-:::
-
-*Associate Researcher*
-
-::: {.d-flex .justify-content-between}
-<div>
-
-**Inserm/University of Paris-Saclay/ University of Versailles Saint Quentin**\
-High dimensional biostatistics, UMR 1018
-
-</div>
-
-::: text-end
-Villejuif, France\
-2012 - 2013
-:::
-:::
-
-*Post-doctoral fellow*
-
-::: {.d-flex .justify-content-between}
-<div>
-
-**University of French Antilles and Guiana**\
-Epidemiology of Tropical diseases, EA 3593
-
-</div>
-
-::: text-end
-Cayenne, French Guiana\
-2009 - 2011
-:::
-:::
-
-*PhD fellow*
-
-::: {.d-flex .justify-content-between}
-<div>
-
-**Inserm**\
-Clinical trials in infectious diseases, SC10-US019
-
-</div>
-
-::: text-end
-Villejuif, France\
-2007 - 2008
-:::
-:::
-
-*Research Engineer*
-
-### Professional Experience
-
-::: {.d-flex .justify-content-between}
-<div>
-
-**Sesan**\
-*Head of data*
-
-</div>
-
-::: text-end
-Paris, France\
-May 2018 - present
-:::
-:::
-
--   Manage a multidisciplinary team (23 persons)\
--   Help health professionals to identify their data needs\
--   Design data infrastructure to collect, organize, document, and track regional health data\
--   Develop repeatable processes and structures for regular analysis and reports\
--   Create and maintain visualizations, dashboards and services from health data\
--   Conduct descriptive and predictive analyses
-
-::: {.d-flex .justify-content-between}
-<div>
-
-**Nantes University Hospital**\
-*Epidemiologist*
-
-</div>
-
-::: text-end
-Nantes, France\
-2013 - 2018
-:::
-:::
-
--   Develop studies in infectious diseases and child & maternal epidemiology
--   Manage data from hospital / regional databases, cohorts & registries
--   Help health professionals to develop epidemiological studies
--   Perform advanced biostatistics analyses
--   Teach Biostatistics & Epidemiology
-
-::: {.d-flex .justify-content-between}
-<div>
-
-**Cayenne General Hospital**\
-*Biostatistician*
-
-</div>
-
-::: text-end
-Cayenne, French Guiana\
-2013 - 2018
-:::
-:::
-
--   Develop studies in tropical diseases epidemiology
--   Manage data from hospital databases, cohorts & registries
--   Help health professionals to analyse epidemiological data
--   Perform advanced biostatistics analyses
+# Professional 
+body_pro <- tagList(
+  resume_code(
+    title = "Sesan (eHealth NPO)", 
+    subtitle = "> Head of data",
+    place = "Paris, France", 
+    date = "2018 - present"
+    ),
+  resume_code(
+    title = "Nantes University Hospital", 
+    subtitle = "> Epidemiologist",
+    place = "Nantes, France", 
+    date = "2013 - 2018"
+    ),
+  resume_code(
+    title = "Cayenne General Hospital", 
+    subtitle = "> Biostatistician",
+    place = "Cayenne, French Guyana", 
+    date = "2008 - 2011"
+    )
+)
+# skills
+body_skill <- div(
+  tagList(
+    progress_bar(title="R",pct="95"),
+    progress_bar(title="Python",pct="78"),
+    progress_bar(title="Machine Learning",pct="80"),
+    progress_bar(title="DataViz",pct="90"),
+    progress_bar(title="HTML5 & CSS",pct="73"),
+    progress_bar(title="Javascript",pct="55"),
+    progress_bar(title="Git, Gitlab, Github",pct="55"),
+    progress_bar(title="SQL, Databases",pct="82"),
+  )
+)
 
 
 
+# compilation
+div(
+  class="grid",
+  # summary
+  div(
+    class = "g-col-12 g-col-md-9 align-self-center",
+    accordeon_code(
+      title = "> SUMMARY",
+      body = body_summary,
+      id = "summary"
+      )
+  ),
+  # empty line
+empty_line(size = 3),
+  # empty line
+empty_line(size = 2),
+  # education
+  div(
+    class = "g-col-12 g-col-md-10 align-self-center",
+accordeon_code(
+      title = "> EDUCATION",
+      body = body_education,
+      id = "education",
+      show = FALSE
+      )
+),
+ # empty line
+empty_line(size = 1),
+# academic Experience
+div(
+    class = "g-col-12 g-col-md-9 align-self-center",
+accordeon_code(
+      title = "> ACADEMIC EXPERIENCE",
+      body = body_academic,
+      id = "academic",
+      show = FALSE
+      )
+),
+# empty line
+empty_line(size = 2),
+# empty line
+empty_line(size = 3),
+# Professional Experience
+div(
+    class = "g-col-12 g-col-md-8 align-self-center",
+accordeon_code(
+      title = "> PROFESSIONAL EXPERIENCE",
+      body = body_pro,
+      id = "professional",
+      show = FALSE
+      )
+),
+# empty line
+empty_line(size = 1),
+# empty line
+#empty_line(size = 0),
+div(
+    class = "g-col-12 g-col-md-7 align-self-center",
+accordeon_code(
+      title = "> TECHNICAL SKILLS",
+      body = body_skill,
+      id = "tech",
+      show = FALSE
+      )
+)
+)
+```
 
-### Teaching
 
-(Work In Progress)
+<!-- ### Education -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **University of Versailles Saint Quentin**\ -->
+<!-- Accreditation to supervise research (HDR) -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Paris, France\ -->
+<!-- 2017 -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- -   Title: *Implications of a systemic approach to health in epidemiology* -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **University of French Antilles and Guiana**\ -->
+<!-- PhD in epidemiology -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Cayenne, French Guiana\ -->
+<!-- 2011 -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- -   Title: *Value of open data in infectious diseases epidemiology* -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **AgroPariTech**\ -->
+<!-- MSc in life and environmental sciences and technologies -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Paris, France\ -->
+<!-- 2006 -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **University of Paris-Sud 11**\ -->
+<!-- MSc in stochastic and statistical Modeling -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Paris, France\ -->
+<!-- 2006 -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- ### Academic Experience -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **Inserm/University of Paris-Saclay/ University of Versailles Saint Quentin**\ -->
+<!-- High dimensional biostatistics, UMR 1018 -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Villejuif, France\ -->
+<!-- July 2016 - present -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- *Associate Researcher* -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **Inserm/University of Paris-Saclay/ University of Versailles Saint Quentin**\ -->
+<!-- High dimensional biostatistics, UMR 1018 -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Villejuif, France\ -->
+<!-- 2012 - 2013 -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- *Post-doctoral fellow* -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **University of French Antilles and Guiana**\ -->
+<!-- Epidemiology of Tropical diseases, EA 3593 -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Cayenne, French Guiana\ -->
+<!-- 2009 - 2011 -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- *PhD fellow* -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **Inserm**\ -->
+<!-- Clinical trials in infectious diseases, SC10-US019 -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Villejuif, France\ -->
+<!-- 2007 - 2008 -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- *Research Engineer* -->
+
+<!-- ### Professional Experience -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **Sesan**\ -->
+<!-- *Head of data* -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Paris, France\ -->
+<!-- May 2018 - present -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- -   Manage a multidisciplinary team (23 persons)\ -->
+<!-- -   Help health professionals to identify their data needs\ -->
+<!-- -   Design data infrastructure to collect, organize, document, and track regional health data\ -->
+<!-- -   Develop repeatable processes and structures for regular analysis and reports\ -->
+<!-- -   Create and maintain visualizations, dashboards and services from health data\ -->
+<!-- -   Conduct descriptive and predictive analyses -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **Nantes University Hospital**\ -->
+<!-- *Epidemiologist* -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Nantes, France\ -->
+<!-- 2013 - 2018 -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- -   Develop studies in infectious diseases and child & maternal epidemiology -->
+<!-- -   Manage data from hospital / regional databases, cohorts & registries -->
+<!-- -   Help health professionals to develop epidemiological studies -->
+<!-- -   Perform advanced biostatistics analyses -->
+<!-- -   Teach Biostatistics & Epidemiology -->
+
+<!-- ::: {.d-flex .justify-content-between} -->
+<!-- <div> -->
+
+<!-- **Cayenne General Hospital**\ -->
+<!-- *Biostatistician* -->
+
+<!-- </div> -->
+
+<!-- ::: text-end -->
+<!-- Cayenne, French Guiana\ -->
+<!-- 2013 - 2018 -->
+<!-- ::: -->
+<!-- ::: -->
+
+<!-- -   Develop studies in tropical diseases epidemiology -->
+<!-- -   Manage data from hospital databases, cohorts & registries -->
+<!-- -   Help health professionals to analyse epidemiological data -->
+<!-- -   Perform advanced biostatistics analyses -->
+
+
+
+
+<!-- ### Teaching -->
+
+<!-- (Work In Progress) -->
