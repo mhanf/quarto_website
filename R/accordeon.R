@@ -51,19 +51,13 @@ resume_code <- function(title, subtitle, text = NULL, place, date){
     ))
 }
 
-empty_line <- function(size){
-  div(
-    class = sprintf("d-none d-md-block g-col-12 g-col-md-%s",size),
-    NULL
-  )
-}
+
 
 
 progress_bar <- function(title,pct){
   div(
     class="m-2",
     div(
-      #class = "fw-bold",
       title
       ),
     div(

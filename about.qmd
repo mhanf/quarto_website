@@ -2,7 +2,7 @@
 ```{r}
 #| echo: false
 #| warning: false
-library(shiny)
+library(htmltools)
 library(fontawesome)
 source("R/accordeon.R")
 
@@ -13,34 +13,34 @@ body_summary <- tagList(
     class="m-1 fw-bold",
     "I'm currently Head of Data at",
     tags$a(
-        "Sesan",
-        href = "https://www.sesan.fr/",
-        target="_blank",
-        rel="noopener noreferrer"
-        ),
+      "Sesan",
+      href = "https://www.sesan.fr/",
+      target="_blank",
+      rel="noopener noreferrer"
+    ),
     "(eHealth NPO)"),
-   p(
+  p(
     class="m-1",
-    "> Data Warehouse, Prediction Model and DataViz design for Health Professionals"
-   ),
+    "> Data Warehouse, Prediction Model & DataViz for health professionals & patients"
+  ),
   p(
     class="m-1 fw-bold",
     "I'm also a Research Associate at ",
     tags$a(
-        "Inserm",
-        href = "https://www.inserm.fr/en/home/",
-        target="_blank",
-        rel="noopener noreferrer"
-        )
-    ),
-   p(
+      "Inserm",
+      href = "https://www.inserm.fr/en/home/",
+      target="_blank",
+      rel="noopener noreferrer"
+    )
+  ),
+  p(
     class="m-1",
     "> Statistics & Epidemiolgy"
-   ),
+  ),
   p(
     class="m-1 fw-bold",
     " I'm proficient in R & Python but is happy to experiment with others languages, frameworks & tools related to Data Science"
-   )
+  )
 )
 
 # Education
@@ -50,25 +50,25 @@ body_education <- tagList(
     subtitle = "> Accreditation to supervise research (HDR)",
     place = "Paris, France", 
     date = "2017"
-    ),
+  ),
   resume_code(
     title = "University of French Antilles and Guyana", 
     subtitle = "> PhD in epidemiology",
     place = "Cayenne, French Guyana", 
     date = "2011"
-    ),
+  ),
   resume_code(
     title = "AgroPariTech", 
     subtitle = "> MSc in life and environmental sciences",
     place = "Paris, France", 
     date = "2006"
-    ),
+  ),
   resume_code(
     title = "University of Paris-Sud 11", 
     subtitle = "> MSc in stochastic and statistical Modeling",
     place = "Paris, France", 
     date = "2006"
-    )
+  )
 )
 
 # academic
@@ -79,28 +79,28 @@ body_academic <- tagList(
     text = "> Associate Researcher",
     place = "Villejuif, France", 
     date = "2016 - present"
-    ),
+  ),
   resume_code(
     title = "Inserm/University of Paris-Saclay", 
     subtitle = "High dimensional biostatistics, UMR 1018",
     text = "> Post-doctoral fellow",
     place = "Villejuif, France", 
     date = "2016 - present"
-    ),
+  ),
   resume_code(
     title = "University of French Antilles and Guyana", 
     subtitle = "Epidemiology of Tropical diseases, EA 3593",
     text = "> PhD fellow",
     place = "Cayenne, French Guyana", 
     date = "2009 - 2011"
-    ),
+  ),
   resume_code(
     title = "Inserm", 
     subtitle = "Infectious diseases clinical trials, US019",
     text = "> Research Engineer",
     place = "Villejuif, France", 
     date = "2007 - 2008"
-    )
+  )
 )
 
 # Professional 
@@ -110,19 +110,19 @@ body_pro <- tagList(
     subtitle = "> Head of data",
     place = "Paris, France", 
     date = "2018 - present"
-    ),
+  ),
   resume_code(
     title = "Nantes University Hospital", 
     subtitle = "> Epidemiologist",
     place = "Nantes, France", 
     date = "2013 - 2018"
-    ),
+  ),
   resume_code(
     title = "Cayenne General Hospital", 
     subtitle = "> Biostatistician",
     place = "Cayenne, French Guyana", 
     date = "2008 - 2011"
-    )
+  )
 )
 # skills
 body_skill <- div(
@@ -140,71 +140,58 @@ body_skill <- div(
 
 
 
-# compilation
+# grid layout
 div(
   class="grid",
   # summary
   div(
-    class = "g-col-12 g-col-md-9 align-self-center",
+    class = "g-col-12 g-col-md-9 align-self-center g-start-1",
     accordeon_code(
       title = "> SUMMARY",
       body = body_summary,
       id = "summary"
-      )
+    )
   ),
-  # empty line
-empty_line(size = 3),
-  # empty line
-empty_line(size = 2),
   # education
   div(
-    class = "g-col-12 g-col-md-10 align-self-center",
-accordeon_code(
+    class = "g-col-12 g-col-md-10 align-self-center g-start-1 g-start-md-3",
+    accordeon_code(
       title = "> EDUCATION",
       body = body_education,
       id = "education",
       show = FALSE
-      )
-),
- # empty line
-empty_line(size = 1),
-# academic Experience
-div(
-    class = "g-col-12 g-col-md-9 align-self-center",
-accordeon_code(
+    )
+  ),
+  # academic Experience
+  div(
+    class = "g-col-12 g-col-md-9 align-self-center g-start-1 g-start-md-2",
+    accordeon_code(
       title = "> ACADEMIC EXPERIENCE",
       body = body_academic,
       id = "academic",
       show = FALSE
-      )
-),
-# empty line
-empty_line(size = 2),
-# empty line
-empty_line(size = 3),
-# Professional Experience
-div(
-    class = "g-col-12 g-col-md-8 align-self-center",
-accordeon_code(
+    )
+  ),
+  # Professional Experience
+  div(
+    class = "g-col-12 g-col-md-8 align-self-center g-start-1 g-start-md-4",
+    accordeon_code(
       title = "> PROFESSIONAL EXPERIENCE",
       body = body_pro,
       id = "professional",
       show = FALSE
-      )
-),
-# empty line
-empty_line(size = 1),
-# empty line
-#empty_line(size = 0),
-div(
-    class = "g-col-12 g-col-md-7 align-self-center",
-accordeon_code(
+    )
+  ),
+  # tech
+  div(
+    class = "g-col-12 g-col-md-5 align-self-center g-start-1",
+    accordeon_code(
       title = "> TECHNICAL SKILLS",
       body = body_skill,
       id = "tech",
       show = FALSE
-      )
-)
+    )
+  )
 )
 ```
 

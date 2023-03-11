@@ -28,7 +28,7 @@ body_hello <- tagList(
   p(
     class="m-1",
     "> I'm passionnate about ",
-    tags$strong("Data Science.")
+    tags$strong("Health Data Science.")
     ),
   p(
     class="m-1",
@@ -99,33 +99,37 @@ shiny::tags$a(
 
 
 
-
+# grid placement
 div(
   class="grid",
-  # photo
+  # hello
   div(
-    class = "g-col-12 g-col-md-8 align-self-center",
+    class = "g-col-12 g-col-md-8 align-self-center g-start-1",
     accordeon_code(
       title = "> HELLO WORLD !",
       body = body_hello,
       id = "hello")
   ),
-  # hello
+  # picture
   div(
-    class = "g-col-12 g-col-md-4 align-self-center",
+    class = "g-col-12 g-col-md-4 align-self-center g-start-1 g-start-md-9",
     accordeon_code(
       title = "> PICTURE",
-      body = img(src = "image/6_SESAN_017carre3.png",class="img-fluid rounded"),
+      body = img(
+        src = "image/6_SESAN_017carre05.png",
+        class="img-fluid rounded"
+        ),
       id = "photo"
-      )
-),
-# empty line
-empty_line(size = 1),
-div(
-    class = "g-col-12  g-col-md-8 justify-content-left",
+    )
+  ),
+  # contact
+  div(
+    class = "g-col-12  g-col-md-8 justify-content-left g-start-1 g-start-md-2",
     accordeon_code(
       title = "> CONTACT",
       body = body_contact,
-      id = "contact")
-))
+      id = "contact"
+      )
+  )
+  )
 ```
