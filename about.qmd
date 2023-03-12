@@ -39,7 +39,15 @@ body_summary <- tagList(
   ),
   p(
     class="m-1 fw-bold",
-    " I'm proficient in R & Python but is happy to experiment with others languages, frameworks & tools related to Data Science"
+    "I like to code during my free time"
+  ),
+  div(class="text-center",
+      fa("r-project", height = "1.5em"),
+      fa("python", height = "1.5em"),
+      fa("html5", height = "1.5em"),
+       fa("css3", height = "1.5em"),
+      fa("js", height = "1.5em"),
+      
   )
 )
 
@@ -127,17 +135,16 @@ body_pro <- tagList(
 # skills
 body_skill <- div(
   tagList(
-    progress_bar(title="R",pct="95"),
-    progress_bar(title="Python",pct="78"),
-    progress_bar(title="Machine Learning",pct="80"),
-    progress_bar(title="DataViz",pct="90"),
-    progress_bar(title="HTML5 & CSS",pct="73"),
-    progress_bar(title="Javascript",pct="55"),
-    progress_bar(title="Git, Gitlab, Github",pct="55"),
-    progress_bar(title="SQL, Databases",pct="82"),
+    progress_bar(id="r_skill", title="R",pct="95"),
+    progress_bar(id="python_skill", title="Python",pct="78"),
+    progress_bar(id="ml_skill", title="Machine Learning",pct="80"),
+    progress_bar(id="dataviz_skill", title="DataViz",pct="90"),
+    progress_bar(id="html_skill", title="HTML5 & CSS",pct="73"),
+    progress_bar(id="js_skill", title="Javascript",pct="55"),
+    progress_bar(id="git_skill", title="Git, Gitlab, Github",pct="55"),
+    progress_bar(id="sql_skill", title="SQL, Databases",pct="82"),
   )
 )
-
 
 
 # grid layout
@@ -162,7 +169,7 @@ div(
       show = FALSE
     )
   ),
-  # academic Experience
+  # Academic Experience
   div(
     class = "g-col-12 g-col-md-9 align-self-center g-start-1 g-start-md-2",
     accordeon_code(

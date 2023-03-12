@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "> MATTHIEU HANF"
+  title: "> PLAY"
   site-url: mhanf.github.io/quarto_website/
   navbar:
     left:

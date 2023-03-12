@@ -18,7 +18,7 @@ badge <- function(x,color){
 }
 
 # bibliography loading
-bibliography <- read_excel("data/bibliography.xlsx")
+bibliography <- read_excel("bibliography.xlsx")
 
 # compilation of bibliography
 list_biblio <- function(i) {
@@ -53,7 +53,7 @@ list_biblio <- function(i) {
         )
     )
   })
-  
+
   return(tagList(html_bib))
 }
 ```
