@@ -59,8 +59,8 @@ body_hello <- tagList(
 body_contact <- tagList(
   p(
     class="m-1",
-    "> ",
-    tags$strong("I will be glad to hear from you.")
+    "I will be",
+    tags$strong("glad to hear from you.")
     ),
   p(
     class="m-1",

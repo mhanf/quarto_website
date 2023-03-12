@@ -10,49 +10,44 @@ source("R/accordeon.R")
 # Summary
 body_summary <- tagList(
   p(
-    class="m-1 fw-bold",
-    "I'm currently Head of Data at",
-    tags$a(
+    class="m-1",
+    "I'm currently",
+    tags$strong("Head of Data at"),
+    tags$strong(tags$a(
       "Sesan",
       href = "https://www.sesan.fr/",
       target="_blank",
       rel="noopener noreferrer"
-    ),
+    )),
     "(eHealth NPO)"),
   p(
     class="m-1",
     "> Data Warehouse, Prediction Model & DataViz for health professionals & patients"
   ),
   p(
-    class="m-1 fw-bold",
-    "I'm also a Research Associate at ",
+    class="m-1",
+    "I'm also a ",
+    tags$strong("Research Associate at ",
     tags$a(
       "Inserm",
       href = "https://www.inserm.fr/en/home/",
       target="_blank",
       rel="noopener noreferrer"
-    )
+    ))
   ),
   p(
     class="m-1",
     "> Statistics & Epidemiolgy"
   ),
   p(
-    class="m-1 fw-bold",
-    "I like to code during my free time"
+    class="m-1",
+    tags$strong("I like to code"),
+    "during my free time"
   ),
   p(
     class="m-1",
     "> R, Python and others languages related to Data Science"
   )
-  # div(class="text-center",
-  #     fa("r-project", height = "1.5em"),
-  #     fa("python", height = "1.5em"),
-  #     fa("html5", height = "1.5em"),
-  #      fa("css3", height = "1.5em"),
-  #     fa("js", height = "1.5em"),
-  #     
-  # )
 )
 
 # Education
@@ -66,7 +61,7 @@ body_education <- tagList(
   resume_code(
     title = "University of French Antilles and Guyana", 
     subtitle = "> PhD in epidemiology",
-    place = "Cayenne, French Guyana", 
+    place = "Cayenne, Fr. Guyana", 
     date = "2011"
   ),
   resume_code(
@@ -90,7 +85,7 @@ body_academic <- tagList(
     subtitle = "High dimensional biostatistics, UMR 1018",
     text = "> Associate Researcher",
     place = "Villejuif, France", 
-    date = "2016 - present"
+    date = "2016-present"
   ),
   resume_code(
     title = "Inserm/University of Paris-Saclay", 
@@ -103,15 +98,15 @@ body_academic <- tagList(
     title = "University of French Antilles and Guyana", 
     subtitle = "Epidemiology of Tropical diseases, EA 3593",
     text = "> PhD fellow",
-    place = "Cayenne, French Guyana", 
-    date = "2009 - 2011"
+    place = "Cayenne, Fr. Guyana", 
+    date = "2009-2011"
   ),
   resume_code(
     title = "Inserm", 
     subtitle = "Infectious diseases clinical trials, US019",
     text = "> Research Engineer",
     place = "Villejuif, France", 
-    date = "2007 - 2008"
+    date = "2007-2008"
   )
 )
 
@@ -119,21 +114,24 @@ body_academic <- tagList(
 body_pro <- tagList(
   resume_code(
     title = "Sesan (eHealth NPO)", 
-    subtitle = "> Head of data",
+    subtitle = "eHealth for health professionals & patients",
+    text = "> Head of Data",
     place = "Paris, France", 
-    date = "2018 - present"
+    date = "2018-present"
   ),
   resume_code(
     title = "Nantes University Hospital", 
-    subtitle = "> Epidemiologist",
+    subtitle = "Clinical Epidemiology",
+    text = "> Epidemiologist",
     place = "Nantes, France", 
-    date = "2013 - 2018"
+    date = "2013-2018"
   ),
   resume_code(
     title = "Cayenne General Hospital", 
-    subtitle = "> Biostatistician",
-    place = "Cayenne, French Guyana", 
-    date = "2008 - 2011"
+    subtitle = "Infectious Diseases Epidemiology",
+    text = "> Biostatistician",
+    place = "Cayenne, Fr. Guyana", 
+    date = "2008-2011"
   )
 )
 # skills
@@ -147,6 +145,7 @@ body_skill <- div(
     progress_bar(id="js_skill", title="Javascript",pct="55"),
     progress_bar(id="git_skill", title="Git, Gitlab, Github",pct="55"),
     progress_bar(id="sql_skill", title="SQL, Databases",pct="82"),
+    progress_bar(id="docker_skill", title="CI/CD, Docker",pct="45")
   )
 )
 
@@ -156,16 +155,28 @@ div(
   class="grid",
   # summary
   div(
-    class = "g-col-12 g-col-md-9 align-self-center g-start-1",
+    class = "g-col-12 g-col-md-8 align-self-center g-start-1",
     accordeon_code(
       title = "> SUMMARY",
       body = body_summary,
       id = "summary"
     )
   ),
+  # # map
+  # div(
+  #   class = "g-col-12 g-col-md-4 align-self-center g-start-1 g-start-md-9",
+  #   accordeon_code(
+  #     title = "> MAP",
+  #     body = img(
+  #       src = "image/world_map2.png",
+  #       class="img-fluid rounded"
+  #       ),
+  #     id = "map"
+  #   )
+  # ),
   # education
   div(
-    class = "g-col-12 g-col-md-10 align-self-center g-start-1 g-start-md-3",
+    class = "g-col-12 g-col-md-11 align-self-center g-start-1 g-start-md-2",
     accordeon_code(
       title = "> EDUCATION",
       body = body_education,
@@ -175,7 +186,7 @@ div(
   ),
   # Academic Experience
   div(
-    class = "g-col-12 g-col-md-9 align-self-center g-start-1 g-start-md-2",
+    class = "g-col-12 g-col-md-11 align-self-center g-start-1 g-start-md-2",
     accordeon_code(
       title = "> ACADEMIC EXPERIENCE",
       body = body_academic,
@@ -185,7 +196,7 @@ div(
   ),
   # Professional Experience
   div(
-    class = "g-col-12 g-col-md-8 align-self-center g-start-1 g-start-md-4",
+    class = "g-col-12 g-col-md-11 align-self-center g-start-1 g-start-md-2",
     accordeon_code(
       title = "> PROFESSIONAL EXPERIENCE",
       body = body_pro,

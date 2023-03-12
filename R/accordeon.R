@@ -40,19 +40,42 @@ accordeon_code <- function(title, body, id, show = TRUE) {
 
 resume_code <- function(title, subtitle, text = NULL, place, date) {
   div(
-    class = "d-flex justify-content-between",
+    class = "grid",
+    style="--bs-gap: 0rem;",
     div(
-      p(class = "m-1 fw-bold", title),
-      p(class = "m-1", subtitle),
-      if (is.null(subtitle) == FALSE) {
-        p(class = "m-1", text)
-      }
-    ),
+      class = "g-col-12 g-col-md-8 align-self-start g-start-1",
+      div(
+        p(class = "m-1 fw-bold", title),
+        p(class = "m-1", subtitle),
+        if (is.null(subtitle) == FALSE) {
+          p(class = "m-1", text)
+          }
+        )
+      ),
     div(
-      p(class = "m-1 text-end", place),
-      p(class = "m-1 text-end", date)
+      class = "g-col-12 g-col-md-4 align-self-end g-start-1 g-start-md-9",
+      div(
+      p(class = "m-1 text-start text-md-end", place),
+      p(class = "m-1 text-start text-md-end", date)
     )
   )
+  )
+  # 
+  # 
+  # div(
+  #   class = "d-flex justify-content-between",
+  #   div(
+  #     p(class = "m-1 fw-bold", title),
+  #     p(class = "m-1", subtitle),
+  #     if (is.null(subtitle) == FALSE) {
+  #       p(class = "m-1", text)
+  #     }
+  #   ),
+  #   div(
+  #     p(class = "m-1 text-end", place),
+  #     p(class = "m-1 text-end", date)
+  #   )
+  #)
 }
 
 
