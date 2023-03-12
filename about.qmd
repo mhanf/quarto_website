@@ -40,15 +40,15 @@ body_summary <- tagList(
   p(
     class="m-1 fw-bold",
     "I like to code during my free time"
-  ),
-  div(class="text-center",
-      fa("r-project", height = "1.5em"),
-      fa("python", height = "1.5em"),
-      fa("html5", height = "1.5em"),
-       fa("css3", height = "1.5em"),
-      fa("js", height = "1.5em"),
-      
-  )
+  )#,
+  # div(class="text-center",
+  #     fa("r-project", height = "1.5em"),
+  #     fa("python", height = "1.5em"),
+  #     fa("html5", height = "1.5em"),
+  #      fa("css3", height = "1.5em"),
+  #     fa("js", height = "1.5em"),
+  #     
+  # )
 )
 
 # Education
