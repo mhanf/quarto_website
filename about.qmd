@@ -40,7 +40,11 @@ body_summary <- tagList(
   p(
     class="m-1 fw-bold",
     "I like to code during my free time"
-  )#,
+  ),
+  p(
+    class="m-1",
+    "> R, Python and others languages related to Data Science"
+  )
   # div(class="text-center",
   #     fa("r-project", height = "1.5em"),
   #     fa("python", height = "1.5em"),
