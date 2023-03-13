@@ -9,20 +9,20 @@ accordeon_code <- function(title, body, id, show = TRUE) {
   }
 
   div(
-    class = "accordion bg-white border-primary border border-1 accordion-flush",
+    class = "accordion bg-white text-primary border-primary border border-1 accordion-flush",
     id = sprintf("accordeon-adapt-%s", id),
     div(
       class = "accordion-item",
       div(
         id = sprintf("%s-headingOne", id),
         tags$button(
-          class = "accordion-button bg-white p-2",
+          class = "accordion-button bg-white text-primary p-2",
           type = "button",
           "data-bs-toggle" = "collapse",
           "data-bs-target" = sprintf("#%s-collapseOne", id),
           "aria-expanded" = "true",
           "aria-controls" = sprintf("%s-collapseOne", id),
-          div(class = "fw-bold", title)
+          div(class = "fw-bold text-primary", title)
         ),
         div(
           id = sprintf("%s-collapseOne", id),

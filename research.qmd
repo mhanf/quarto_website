@@ -1,17 +1,14 @@
----
-title: "Research"
----
 
 ```{r}
 #| echo: false
 #| warning: false
 
-library(shiny)
-library(bslib)
-library(readxl)
+library(htmltools)
 library(fontawesome)
+source("R/accordeon.R")
+library(readxl)
 
-badge <- function(x,color){
+badge <- function(x,color = "primary"){
   class <- paste0("badge bg-transparent border border-",color," text-",color," fw-normal")
   badge <-  tags$span(class=class,x)
   return(badge)
@@ -20,69 +17,152 @@ badge <- function(x,color){
 # bibliography loading
 bibliography <- read_excel("bibliography.xlsx")
 
+
+year_level <- function(year, id_control,body){
+  div(
+    class="accordion-item",
+    id=sprintf("flush-%s",year),
+    tags$button(
+          class = "accordion-button bg-white p-2",
+          type = "button",
+          "data-bs-toggle" = "collapse",
+          "data-bs-target" = sprintf("#%s-collapse", year),
+          "aria-expanded" = "true",
+          "aria-controls" = sprintf("%s-collapse", year),
+          div(class = "fw-bold", year)
+        ),
+    div(
+      id=sprintf("flush-%s",year),
+      class="accordion-collapse collapse",
+      'aria-labelledby'=sprintf("flush-%s",year),
+      'data-bs-parent'=sprintf("#flush-%s",id_control),
+      body
+    )
+    )
+}
+
+
 # compilation of bibliography
 list_biblio <- function(i) {
   bibliography_year  <- bibliography[bibliography$year == i,]
   html_bib <- lapply( 1:dim(bibliography_year)[1], function(j) {
-    div(class="list-group-item text-dark text-start",
-        tags$span(
-          #class="text-dark fs-6",
+    div(
+          id = sprintf("%s-collapseOne-%s", j, bibliography_year),
+          class = sprintf("accordion-collapse collapse %s", "show"),
+          "aria-labelledby" = sprintf("%s-headingOne-%s", j, bibliography_year),
+          div(
+            class = "accordion-body border-top border-primary",
+          tags$span(
+          class="m-1 text-primary",
           bibliography_year$title[j]
         ),
         tags$span(
-          class="text-primary",
+          class="text-primary fw-bold",
           bibliography_year$journal[j]
         ),
         div(
           class="d-flex justify-content-between mt-1 mb-2",
           div(
-            badge(bibliography_year$author_place[j],"dark"),
+            class="text-primary",
+            bibliography_year$author_place[j],
             tags$a(
               href=bibliography_year$url[j],
               role="button",
-              class="badge bg-transparent border border-dark text-dark fw-normal",
-              icon("globe")
+              fa("globe")
             )
           ),
           div(
-            if (bibliography_year$tag_infectious[j]==1){badge(fontawesome::fa("virus"),"dark")},
-            if (bibliography_year$tag_child[j]==1){badge(fontawesome::fa("child"),"dark")},
-            if (bibliography_year$tag_women[j]==1){badge(fontawesome::fa("female"),"dark")},
-            if (bibliography_year$tag_method[j]==1){badge(fontawesome::fa("wrench"),"dark")}
+            if (bibliography_year$tag_infectious[j]==1){fontawesome::fa("virus")},
+            if (bibliography_year$tag_child[j]==1){fontawesome::fa("child")},
+            if (bibliography_year$tag_women[j]==1){fontawesome::fa("female")},
+            if (bibliography_year$tag_method[j]==1){fontawesome::fa("wrench")}
           )
         )
-    )
+          )
+        )
+    # div(class="list-group-item text-primary text-start",
+    #     tags$span(
+    #       #class="text-dark fs-6",
+    #       bibliography_year$title[j]
+    #     ),
+    #     tags$span(
+    #       class="text-primary",
+    #       bibliography_year$journal[j]
+    #     ),
+    #     div(
+    #       class="d-flex justify-content-between mt-1 mb-2",
+    #       div(
+    #         badge(bibliography_year$author_place[j],"dark"),
+    #         tags$a(
+    #           href=bibliography_year$url[j],
+    #           role="button",
+    #           class="badge bg-transparent border border-primary text-dark fw-normal",
+    #           fa("globe")
+    #         )
+    #       ),
+    #       div(
+    #         if (bibliography_year$tag_infectious[j]==1){badge(fontawesome::fa("virus"))},
+    #         if (bibliography_year$tag_child[j]==1){badge(fontawesome::fa("child"))},
+    #         if (bibliography_year$tag_women[j]==1){badge(fontawesome::fa("female"))},
+    #         if (bibliography_year$tag_method[j]==1){badge(fontawesome::fa("wrench"))}
+    #       )
+    #     )
+    # )
   })
 
   return(tagList(html_bib))
 }
+
+### function year
+
+year_collapse <- function(i){
+   div(
+        id = sprintf("%s-headingOne", i),
+        tags$button(
+          class = "accordion-button bg-white p-2",
+          type = "button",
+          "data-bs-toggle" = "collapse",
+          "data-bs-target" = sprintf("#%s-collapseOne", i),
+          "aria-expanded" = "true",
+          "aria-controls" = sprintf("%s-collapseOne", i),
+          div(class = "fw-bold", i)
+        ),
+     list_biblio(i)    
+   )
+}
+
+research <-
+  tagList(
+    div(tags$strong("My research areas revolve around:")),
+    div("> Statistics & Data Science", fa("wrench")),
+    div("> Infectious Diseases", fa("virus")),
+    div("> Pediatrics Epidemiology", fa("child")),
+    div("> Women Health Epidemiology", fa("female"))
+    )
 ```
 
-
-
-
-Here are my publications.
 
 ```{r}
 #| echo: false
 #| warning: false
 div(
-"My research areas revolve around Statistics & Data Science",
-badge(icon("wrench"),"dark"),
-", Infectious Diseases",
-badge(fa("virus"),"dark"),
-", Pediatrics",
-badge(fa("child"),"dark"),
-" and Women Health",
-badge(fa("female"),"dark"),
-" epidemiology."
+  class="grid",
+div(
+    class = "g-col-12 g-col-md-9 align-self-center g-start-1 g-start-md-1",
+    accordeon_code(
+      title = "> Publications",
+      body = research,
+      id = "research",
+      show = TRUE
+    )
+  )
 )
 ```
 ### 2022
 ```{r}
 #| echo: false
 #| warning: false
-list_biblio("2022")
+year_level(year = 2022, id_control = "test",body = "youpi")
 ```
 ### 2020
 ```{r}

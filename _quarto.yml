@@ -27,7 +27,8 @@ website:
 format:
   html:
     theme:
-      light: custom.scss
+      light: theme/light_theme.scss
+      dark: theme/dark_theme.scss
     smooth-scroll: true
     link-external-newwindow: true
 

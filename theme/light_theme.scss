@@ -1,0 +1,121 @@
+/*-- scss:defaults --*/
+
+@font-face {
+   font-family: 'font-title';
+   src: url("fonts/IBMPlexMono-Regular.ttf") format("truetype");
+}
+
+@font-face {
+   font-family: 'font-base';
+   src: url("fonts/IBMPlexMono-Regular.ttf") format("truetype");
+}
+
+//
+// Color system
+//
+
+$white: #fff !default;
+$primary: #18191A !default;
+$secondary: darkgrey !default;
+$success: blue !default;
+$info: red !default;
+$warning: red !default;
+$danger: red !default;
+$light: red !default;
+$dark: blue !default;
+
+$navbar-bg: $white !default;
+
+
+$headings-font-family: font-title !default;
+
+
+$btn-active-box-shadow: inset 0 3px 5px rgba($white, .125) !default;
+
+// progress bar
+$progress-border-radius: 0 !default;
+
+// accordeon
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='bi bi-plus-lg' fill = '#18191A' width='16' height='16' viewBox='0 0 16 16'><path d='M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2Z'/></svg>");
+
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='bi bi-dash-lg' fill = '#18191A' width='16' height='16' viewBox='0 0 16 16'><path d='M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z'/></svg>");
+
+/*-- scss:rules --*/
+
+body {
+  color : $primary !important;
+  font-family : font-base !important;
+  font-size: 0.8rem !important;
+}
+
+
+// navbar
+.navbar{
+   font-size: 1rem !important;
+}
+
+// accordeon
+.accordion-button{
+  box-shadow: none !important;
+  color: $primary !important;
+}
+
+// hover on navbar
+.navbar-expand-lg .navbar-nav .nav-link, .aa-SubmitIcon {
+  color: $primary !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover, .aa-SubmitIcon:hover {
+  color: $primary !important;
+  font-weight: bold !important;
+}
+.navbar-expand-lg .navbar-nav .nav-link.active, .aa-SubmitIcon.active {
+  color: $primary !important;
+  font-weight: bold !important;
+}
+
+.navbar-toggler, .navbar-text {
+color: $primary !important;
+border-color: transparent !important;
+}
+
+// navbar-brand
+.navbar-brand {
+color: $primary !important;
+border-color: transparent !important;  
+font-family: font-title !important; 
+font-weight: bold !important;
+}
+
+// change color of burger menu in navbar
+.navbar-toggler-icon {
+            background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+        }
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0 !important;
+}
+
+// title
+
+
+h1 {
+ color: $primary !important; 
+}
+
+
+h2, h3 {
+ color: $secondary !important; 
+}
+
+.nav-footer {
+  color: $primary !important;
+  background: $white !important;
+}
+
+.nav-footer a {
+  color: $primary !important;
+  font-weight: bold !important;
+}
+

@@ -149,7 +149,6 @@ body_skill <- div(
   )
 )
 
-
 # grid layout
 div(
   class="grid",
