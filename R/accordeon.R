@@ -7,7 +7,7 @@ accordeon_code <- function(title, body, id, show = TRUE) {
   } else {
     collapse <- "hide"
   }
-
+  
   div(
     class = "accordion bg-white text-primary border-primary border border-1 accordion-flush",
     id = sprintf("accordeon-adapt-%s", id),
@@ -60,22 +60,6 @@ resume_code <- function(title, subtitle, text = NULL, place, date) {
     )
   )
   )
-  # 
-  # 
-  # div(
-  #   class = "d-flex justify-content-between",
-  #   div(
-  #     p(class = "m-1 fw-bold", title),
-  #     p(class = "m-1", subtitle),
-  #     if (is.null(subtitle) == FALSE) {
-  #       p(class = "m-1", text)
-  #     }
-  #   ),
-  #   div(
-  #     p(class = "m-1 text-end", place),
-  #     p(class = "m-1 text-end", date)
-  #   )
-  #)
 }
 
 
@@ -103,3 +87,10 @@ progress_bar <- function(id, title, pct) {
     )
   )
 }
+
+
+
+
+
+
+

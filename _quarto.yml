@@ -14,7 +14,7 @@ website:
         text: Home
       - href: about.qmd
         text: About
-      - href: 404.qmd
+      - href: research.qmd
         text: Research
       - href: 404.qmd
         text: Project

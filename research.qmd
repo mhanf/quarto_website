@@ -11,78 +11,160 @@ library(fontawesome)
 source("R/accordeon.R")
 library(readxl)
 
-badge <- function(x,color = "primary"){
-  class <- paste0("badge bg-transparent border border-",color," text-",color," fw-normal")
-  badge <-  tags$span(class=class,x)
-  return(badge)
-}
-
-# bibliography loading
 bibliography <- read_excel("bibliography.xlsx")
+# bibliography loading
 
 
-year_level <- function(year, id_control,body){
-  div(
-    class="accordion-item",
-    id=sprintf("flush-%s",year),
-    tags$button(
-          class = "accordion-button bg-white p-2",
-          type = "button",
-          "data-bs-toggle" = "collapse",
-          "data-bs-target" = sprintf("#%s-collapse", year),
-          "aria-expanded" = "true",
-          "aria-controls" = sprintf("%s-collapse", year),
-          div(class = "fw-bold", year)
-        ),
-    div(
-      id=sprintf("flush-%s",year),
-      class="accordion-collapse collapse",
-      'aria-labelledby'=sprintf("flush-%s",year),
-      'data-bs-parent'=sprintf("#flush-%s",id_control),
-      body
-    )
-    )
-}
+# box publication
 
-
-# compilation of bibliography
-list_biblio <- function(i) {
-  bibliography_year  <- bibliography[bibliography$year == i,]
-  html_bib <- lapply( 1:dim(bibliography_year)[1], function(j) {
-    div(
-          id = sprintf("%s-collapseOne-%s", j, bibliography_year),
-          class = sprintf("accordion-collapse collapse %s", "show"),
-          "aria-labelledby" = sprintf("%s-headingOne-%s", j, bibliography_year),
-          div(
-            class = "accordion-body border-top border-primary",
-          tags$span(
-          class="m-1 text-primary",
-          bibliography_year$title[j]
+box_publi <- function(data){
+  tagList(
+tags$span(
+          class="text-primary",
+          "> ",
+          data$title[1]
         ),
         tags$span(
           class="text-primary fw-bold",
-          bibliography_year$journal[j]
+          data$journal[1]
         ),
         div(
-          class="d-flex justify-content-between mt-1 mb-2",
+          class="d-flex justify-content-between mt-2",
           div(
             class="text-primary",
-            bibliography_year$author_place[j],
+            data$author_place[1],
             tags$a(
-              href=bibliography_year$url[j],
+              href=data$url[1],
               role="button",
               fa("globe")
             )
           ),
           div(
-            if (bibliography_year$tag_infectious[j]==1){fontawesome::fa("virus")},
-            if (bibliography_year$tag_child[j]==1){fontawesome::fa("child")},
-            if (bibliography_year$tag_women[j]==1){fontawesome::fa("female")},
-            if (bibliography_year$tag_method[j]==1){fontawesome::fa("wrench")}
+            if (data$tag_infectious[1]==1){fontawesome::fa("virus")},
+            if (data$tag_child[1]==1){fontawesome::fa("child")},
+            if (data$tag_women[1]==1){fontawesome::fa("female")},
+            if (data$tag_method[1]==1){fontawesome::fa("wrench")}
           )
         )
           )
+}
+
+# function selected year
+selected_year_item <- function(data,selected_year, id, collapse){
+  
+  data_selected_year <- data[data$year == selected_year,]
+  tag_year <- NULL
+  
+    for (i in 1: dim(data_selected_year)[1]){
+    # first item
+      essai <- div(
+          id = sprintf("%s-collapse%s", id,data_selected_year$year[i]),
+          class = sprintf("accordion-collapse collapse %s", collapse),
+          "aria-labelledby" = sprintf(
+            "%s-heading%s", 
+            id,
+            data_selected_year$year[i]
+            ),
+          div(
+            class = "accordion-body border-top border-primary",
+            box_publi(data_selected_year[i,])
+            #sprintf("body %s", i)
+          )
         )
+      tag_year <- tagList(tag_year,essai)
+    }
+  return(tag_year)
+  }
+
+# accordeon function
+accordeon_mult_code <- function(
+    data,
+    id, 
+    show = TRUE) {
+  collapse <- "show"
+  if (show == TRUE) {
+    collapse <- "show"
+  } else {
+    collapse <- "hide"
+  }
+  
+  final_tag <- NULL
+  unique_year <- unique(data$year)
+  
+  for (selected_year in unique_year){
+  
+  tag <-
+    div(
+  class = "g-col-12 align-self-center g-start-1",
+    div(
+  class = "accordion accordion-flush bg-white text-primary border-primary border border-1 accordion-flush",
+  id = sprintf("accordeon-adapt-%s", id),
+    div(
+      class = "accordion-item",
+      div(
+        id = sprintf("%s-heading%s", id, selected_year),
+        tags$button(
+          class = "accordion-button bg-white text-primary p-2",
+          type = "button",
+          "data-bs-toggle" = "collapse",
+          "data-bs-target" = sprintf("#%s-collapse%s", id, selected_year),
+          "aria-expanded" = "true",
+          "aria-controls" = sprintf("%s-collapse%s", id, selected_year),
+          div(class = "fw-bold text-primary", selected_year)
+        ),
+        selected_year_item(data = data, selected_year = selected_year, id = id, collapse = collapse)
+      )
+    )))
+  final_tag <- tagList(final_tag, tag)
+  }
+  
+  final_tag
+  # div(
+  # class = "accordion accordion-flush bg-white text-primary border-primary border border-1 accordion-flush",
+  # id = sprintf("accordeon-adapt-%s", id),
+  # final_tag
+  # )
+  
+}
+
+# # compilation of bibliography
+# list_biblio <- function(i) {
+#   bibliography_year  <- bibliography[bibliography$year == i,]
+#   html_bib <- lapply( 1:dim(bibliography_year)[1], function(j) {
+#     div(
+#           id = sprintf("%s-collapseOne-%s", j, bibliography_year),
+#           class = sprintf("accordion-collapse collapse %s", "show"),
+#           "aria-labelledby" = sprintf("%s-headingOne-%s", j, bibliography_year),
+#           div(
+#             class = "accordion-body border-top border-primary",
+#           tags$span(
+#           class="m-1 text-primary",
+#           bibliography_year$title[j]
+#         ),
+#         tags$span(
+#           class="text-primary fw-bold",
+#           bibliography_year$journal[j]
+#         ),
+#         div(
+#           class="d-flex justify-content-between mt-1 mb-2",
+#           div(
+#             class="text-primary",
+#             bibliography_year$author_place[j],
+#             tags$a(
+#               href=bibliography_year$url[j],
+#               role="button",
+#               fa("globe")
+#             )
+#           ),
+#           div(
+#             if (bibliography_year$tag_infectious[j]==1){fontawesome::fa("virus")},
+#             if (bibliography_year$tag_child[j]==1){fontawesome::fa("child")},
+#             if (bibliography_year$tag_women[j]==1){fontawesome::fa("female")},
+#             if (bibliography_year$tag_method[j]==1){fontawesome::fa("wrench")}
+#           )
+#         )
+#           )
+#         )
     # div(class="list-group-item text-primary text-start",
     #     tags$span(
     #       #class="text-dark fs-6",
@@ -111,28 +193,28 @@ list_biblio <- function(i) {
     #       )
     #     )
     # )
-  })
+  # })
 
-  return(tagList(html_bib))
-}
+#   return(tagList(html_bib))
+# }
 
-### function year
-
-year_collapse <- function(i){
-   div(
-        id = sprintf("%s-headingOne", i),
-        tags$button(
-          class = "accordion-button bg-white p-2",
-          type = "button",
-          "data-bs-toggle" = "collapse",
-          "data-bs-target" = sprintf("#%s-collapseOne", i),
-          "aria-expanded" = "true",
-          "aria-controls" = sprintf("%s-collapseOne", i),
-          div(class = "fw-bold", i)
-        ),
-     list_biblio(i)    
-   )
-}
+# ### function year
+# 
+# year_collapse <- function(i){
+#    div(
+#         id = sprintf("%s-headingOne", i),
+#         tags$button(
+#           class = "accordion-button bg-white p-2",
+#           type = "button",
+#           "data-bs-toggle" = "collapse",
+#           "data-bs-target" = sprintf("#%s-collapseOne", i),
+#           "aria-expanded" = "true",
+#           "aria-controls" = sprintf("%s-collapseOne", i),
+#           div(class = "fw-bold", i)
+#         ),
+#      list_biblio(i)    
+#    )
+# }
 
 research <-
   tagList(
@@ -151,94 +233,102 @@ research <-
 div(
   class="grid",
 div(
-    class = "g-col-12 g-col-md-9 align-self-center g-start-1 g-start-md-1",
+    class = "g-col-12 g-col-md-12 align-self-center g-start-1 g-start-md-1",
     accordeon_code(
       title = "> Publications",
       body = research,
       id = "research",
       show = TRUE
     )
-  )
+  ),
+# div(
+#   class = "g-col-12 g-col-md-12 align-self-center g-start-1 g-start-md-1",
+  accordeon_mult_code(
+    data = bibliography,
+    id = "accordeon", 
+    show = FALSE
+    )
+#)
 )
 ```
-### 2022
-```{r}
-#| echo: false
-#| warning: false
-year_level(year = 2022, id_control = "test",body = "youpi")
-```
-### 2020
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2020")
-```
-### 2019
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2019")
-```
-### 2018
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2018")
-```
-### 2017
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2017")
-```
-### 2016
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2016")
-```
-### 2015
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2015")
-```
-### 2014
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2014")
-```
-### 2013
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2013")
-```
-### 2012
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2012")
-```
-### 2011
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2011")
-```
-### 2010
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2010")
-```
-### 2009
-```{r}
-#| echo: false
-#| warning: false
-list_biblio("2009")
-```
+<!-- ### 2022 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- year_level(year = 2022, id_control = "test",body = "youpi") -->
+<!-- ``` -->
+<!-- ### 2020 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2020") -->
+<!-- ``` -->
+<!-- ### 2019 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2019") -->
+<!-- ``` -->
+<!-- ### 2018 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2018") -->
+<!-- ``` -->
+<!-- ### 2017 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2017") -->
+<!-- ``` -->
+<!-- ### 2016 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2016") -->
+<!-- ``` -->
+<!-- ### 2015 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2015") -->
+<!-- ``` -->
+<!-- ### 2014 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2014") -->
+<!-- ``` -->
+<!-- ### 2013 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2013") -->
+<!-- ``` -->
+<!-- ### 2012 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2012") -->
+<!-- ``` -->
+<!-- ### 2011 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2011") -->
+<!-- ``` -->
+<!-- ### 2010 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2010") -->
+<!-- ``` -->
+<!-- ### 2009 -->
+<!-- ```{r} -->
+<!-- #| echo: false -->
+<!-- #| warning: false -->
+<!-- list_biblio("2009") -->
+<!-- ``` -->
 
 
 
