@@ -3,8 +3,7 @@
 ```{r}
 #| echo: false
 #| warning: false
-library(shiny)
-
+library(htmltools)
 source("R/accordeon.R")
 
 card_code <- function(title,body){
@@ -48,7 +47,7 @@ body_hello <- tagList(
   p(
     class="m-1",
     "> ",
-    tags$a(class = "fw-bold", "Resume", href = "about.qmd"),
+    tags$a(class = "fw-bold", "About", href = "about.qmd"),
     "> ",
     tags$a(class = "fw-bold", "Research", href = "research.qmd"),
     "> ",

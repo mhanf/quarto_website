@@ -1,0 +1,45 @@
+
+```{r}
+#| echo: false
+#| warning: false
+library(htmltools)
+library(fontawesome)
+source("R/accordeon.R")
+
+
+body_error <- tagList(
+  p(
+    class="m-1 fw-bold",
+    "The page you requested cannot be found."
+    ),
+  # p(
+  #   class="m-1",
+  #   "> Don't hesitate to contact me if you think what you were looking for should be here."
+  #   ),
+  p(
+    class="m-1",
+    "> The site is currently under construction.",
+    tags$strong("Be patient it's coming soon !"),
+    ),
+  br(),
+  p(
+    class="m-1",
+    "> ",
+    tags$a(class = "fw-bold", "Home", href = "index.qmd")
+  )
+)
+
+        div(
+          class="grid",
+          style="--bs-rows: 3; height:60vh;",
+          div(
+            class="g-start-1 g-start-md-3 g-col-12 g-col-md-8",
+            style="grid-row: 2",
+accordeon_code(
+      title = "404 ERROR",
+      body = body_error,
+      id = "error"
+    )
+))
+
+```
