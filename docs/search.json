@@ -23,7 +23,7 @@
   {
     "objectID": "software.html",
     "href": "software.html",
-    "title": "Projects",
+    "title": "> PLAY",
     "section": "",
     "text": "Here are my software projects."
   },
@@ -37,14 +37,14 @@
   {
     "objectID": "software.html#packages",
     "href": "software.html#packages",
-    "title": "Projects",
+    "title": "> PLAY",
     "section": "Packages",
     "text": "Packages\nDuring my free & professional time, I like to play with R, HTML, CSS, and Javascript to construct R shiny packages that facilitate the design of apps ready for production (and maximize time for Data Science & Research).\n\n\n\n\n\n\n\n\n\n\nShinyRating\nShinyRating is an R package that allow to create rating inputs in Shiny. Several options\n    are available (type, number, color, size, margin, tooltip, mode and animation of icons).\n\n\n\n\n\nOpen\n\n\n\n\n\n\n\n\n\n\n\n\n\nShinyFriendlyCaptcha\nFriendly Captcha is a GDPR compliant European alternative to Google Recaptcha.\n    ShinyFriendlyCaptcha is a R package that provide Friendly Captcha to Shiny apps.\n\n\n\n\n\nOpen\n\n\n\n\n\n\n\n\n\n\n\n\n\nInterfacer\nInterfacer is an R package developped for Sesan that allows to simplify the development,\n    layout, theme design and deployment of complex\n    web forms using Shiny.\n\n\n\n\n\nPrivate\n\n\n\n\n\n\n\n\n\n\n\n\n\nAuthentifier\nAuthentifier is an R package developped for Sesan that add a simple, \n    strong or openID authentication layer as well as a \n    user account management toolbar to Shiny apps.\n\n\n\n\n\nPrivate"
   },
   {
     "objectID": "software.html#shiny-apps",
     "href": "software.html#shiny-apps",
-    "title": "Projects",
+    "title": "> PLAY",
     "section": "Shiny Apps",
     "text": "Shiny Apps\n(Work In Progress)"
   }

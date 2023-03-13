@@ -153,7 +153,7 @@ div(
     accordeon_code(
       title = "> PICTURE",
       body = img(
-        src = "image/6_SESAN_017carre05.png",
+        src = "image/6_SESAN_017carre06.png",
         class="img-fluid rounded"
         ),
       id = "photo"

@@ -1,6 +1,3 @@
----
-title: "Projects"
----
 
 Here are my software projects. 
 
