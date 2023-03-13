@@ -29,6 +29,7 @@ body_error <- tagList(
   )
 )
 
+# final compilation
         div(
           class="grid",
           style="--bs-rows: 3; height:60vh;",

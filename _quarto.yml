@@ -5,15 +5,18 @@ project:
 website:
   title: "> M|H"
   site-url: mhanf.github.io/quarto_website/
+  description: Personal website
+  repo-url: https://github.com/mhanf/quarto_website
+  repo-actions: issue
   navbar:
     left:
       - href: index.qmd
         text: Home
       - href: about.qmd
         text: About
-      - href: research.qmd
+      - href: 404.qmd
         text: Research
-      - href: software.qmd
+      - href: 404.qmd
         text: Project
     right:
       - icon: github
