@@ -1,11 +1,12 @@
 
 # accordeon function
 accordeon_code <- function(title, body, id, show = TRUE) {
-  collapse <- "show"
   if (show == TRUE) {
     collapse <- "show"
+    button_collapse <- ""
   } else {
     collapse <- "hide"
+    button_collapse <- "collapsed"
   }
   
   div(
@@ -16,7 +17,7 @@ accordeon_code <- function(title, body, id, show = TRUE) {
       div(
         id = sprintf("%s-headingOne", id),
         tags$button(
-          class = "accordion-button bg-white text-primary p-2",
+          class = sprintf("accordion-button bg-white text-primary p-2 %s",button_collapse),
           type = "button",
           "data-bs-toggle" = "collapse",
           "data-bs-target" = sprintf("#%s-collapseOne", id),
