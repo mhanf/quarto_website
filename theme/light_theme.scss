@@ -127,36 +127,13 @@ font-weight: bold !important;
 }
 
 ////hover
-.search-result-container:hover {
-  background-color: black !important;
-}
-
-.search-result-container:hover .search-result-title-container {
-  background-color: black !important;
-}
-
-.search-result-container:hover .search-result-icon {
-  background-color: black !important;
-}
-
-.search-result-container:hover .search-result-text-container {
-  background-color: black !important;
-}
 
 .search-result-container:hover .search-result-text {
-  color: white !important;
-  opacity: 1 !important;
-  background-color: black !important;
+  font-weight: bold !important;
 }
 
 .search-result-container:hover .search-result-title {
-  color: $white !important;
-  opacity: 1 !important;
-}
-
-.search-result-container:hover .search-result-icon {
-  color: $white !important;
-  opacity: 1 !important;
+ font-weight: bold !important;
 }
 
 //// input
