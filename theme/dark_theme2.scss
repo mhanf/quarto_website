@@ -109,6 +109,58 @@ font-weight: bold !important;
   box-shadow: 0 0 0 0 !important;
 }
 
+// search bar
+
+.aa-DetachedCancelButton{
+  color: $primary !important;
+  opacity: 1 !important;
+}
+
+
+// text
+.search-result-container .search-result-text {
+  color: $primary !important;
+  opacity: 1 !important;
+}
+
+.search-result-container:hover .search-result-text {
+  color: $white !important;
+  opacity: 1 !important;
+}
+
+//title
+.search-result-container .search-result-title {
+  color: $primary !important;
+  opacity: 1 !important;
+}
+
+.search-result-container:hover .search-result-title {
+  color: $white !important;
+  opacity: 1 !important;
+}
+
+//icon
+.search-result-container .search-result-icon {
+  color: $primary !important;
+  opacity: 1 !important;
+}
+
+.search-result-container:hover .search-result-icon {
+  color: $white !important;
+  opacity: 1 !important;
+}
+
+//input
+.aa-Input {
+  color: $primary !important;
+  opacity: 1 !important;
+}
+
+.aa-SubmitButton .aa-SubmitIcon{
+  fill: $primary !important;
+  opacity: 1 !important;
+}
+
 // title
 
 

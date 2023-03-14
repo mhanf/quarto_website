@@ -32,6 +32,7 @@ $headings-font-family: font-title !default;
 
 $btn-active-box-shadow: inset 0 3px 5px rgba($white, .125) !default;
 
+
 // progress bar
 $progress-border-radius: 0 !default;
 
@@ -107,6 +108,79 @@ font-weight: bold !important;
 
 .navbar-toggler:focus {
   box-shadow: 0 0 0 0 !important;
+}
+
+// search bar
+
+.aa-DetachedCancelButton:hover {
+  color: $primary !important;
+  opacity: 1 !important;
+}
+
+//// text default
+
+.search-result-container, .search-result-text-container, 
+.search-result-title-container, .search-result-text, .search-result-icon, .search-result-icon-container {
+  background-color: $white !important;
+}
+
+.search-result-container .search-result-text {
+  color: $primary !important;
+  opacity: 1 !important;
+}
+
+.search-result-container .search-result-title {
+  color: $primary !important;
+  opacity: 1 !important;
+}
+
+.search-result-container .search-result-icon {
+  color: $primary !important;
+  opacity: 1 !important;
+}
+
+////hover
+.search-result-container:hover {
+  background-color: white !important;
+}
+
+.search-result-container:hover .search-result-title-container {
+  background-color: white !important;
+}
+
+.search-result-container:hover .search-result-icon {
+  background-color: white !important;
+}
+
+.search-result-container:hover .search-result-text-container {
+  background-color: white !important;
+}
+
+.search-result-container:hover .search-result-text {
+  color: black !important;
+  opacity: 1 !important;
+  background-color: white !important;
+}
+
+.search-result-container:hover .search-result-title {
+  color: $white !important;
+  opacity: 1 !important;
+}
+
+.search-result-container:hover .search-result-icon {
+  color: $white !important;
+  opacity: 1 !important;
+}
+
+////input
+.aa-Input {
+  color: $primary !important;
+  opacity: 1 !important;
+}
+
+.aa-SubmitButton .aa-SubmitIcon{
+  fill: $primary !important;
+  opacity: 1 !important;
 }
 
 // title
