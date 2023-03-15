@@ -2,6 +2,9 @@ project:
   type: website
   output-dir: docs
 
+execute:
+  freeze: true
+
 website:
   title: "> M|H"
   site-url: mhanf.github.io/quarto_website/
