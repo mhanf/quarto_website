@@ -1,3 +1,6 @@
+---
+title: OUUPPPS ...
+---
 
 ```{r}
 #| echo: false
@@ -11,15 +14,15 @@ body_error <- tagList(
     class="m-1 fw-bold",
     "The page you requested cannot be found."
     ),
-  # p(
-  #   class="m-1",
-  #   "> Don't hesitate to contact me if you think what you were looking for should be here."
-  #   ),
   p(
     class="m-1",
-    "> The site is currently under construction.",
-    tags$strong("Be patient it's coming soon !"),
+    "> Don't hesitate to contact me if you think what you were looking for should be here."
     ),
+  # p(
+  #   class="m-1",
+  #   "> The site is currently under construction.",
+  #   tags$strong("Be patient it's coming soon !"),
+  #   ),
   br(),
   p(
     class="m-1",
