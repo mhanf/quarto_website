@@ -1,113 +1,121 @@
----
-draft: true
----
-
-Here are my software projects. 
-
-## Packages
-
-During my free & professional time, I like to play with R, HTML, CSS, and Javascript to construct R shiny packages that facilitate the design of apps ready for production (and maximize time for Data Science & Research).
 
 ```{r}
 #| echo: false
 #| warning: false
+library(htmltools)
+library(fontawesome)
+source("R/accordeon.R")
 
-library(bslib)
-library(shiny)
+# bodies of accordions
 
-card_modif <- function(
-    img,
-    href,
-    title,
-    body,
-    icon_lock = "lock-open",
-    icon_link="github",
-    text_lock = "Open"
-    ){
-  div(
-    class = "g-col-12 g-col-md-6",
-    div(
-      class="card h-100 border-0 shadow",
-      tags$img(
-        src=img,
-        class="card-img-top mx-auto mt-2",
-        style = "width:33%",
-        alt="..."
-        ),
-      div(class = "card-body",
-          h5(class="card-title",title),
-          div(class="fs-6 lead text-muted",body),
-          ),
-      div(
-        class="card-footer bg-white text-center",
-        div(
-          class="d-flex justify-content-between align-items-center",
-          div(fontawesome::fa(icon_lock), text_lock, class = "fw-bold text-primary"),
-          tags$a(
-            href = href,
-            class="btn m-1 text-primary",
-            fontawesome::fa("arrow-up-right-from-square"),
-            fontawesome::fa(icon_link)
-            )
-          )
-        )
-      )
-    )
-}
-```
-
-
-```{r}
-#| echo: false
-#| warning: false
-
-div(
-  class="grid p-4",
-  card_modif(
-    img = "image/shinyrating.png",
-    href = "https://github.com/mhanf/ShinyRating",
-    title = "ShinyRating",
-    icon_lock = "lock-open",
-    text_lock = "Open",
-    icon_link="github",
-    body = "ShinyRating is an R package that allow to create rating inputs in Shiny. Several options
-    are available (type, number, color, size, margin, tooltip, mode and animation of icons)."
-      ),
-  card_modif(
-    img = "image/shinyfriendlycaptcha.png",
-    href = "https://github.com/mhanf/ShinyFriendlyCaptcha",
-    title = "ShinyFriendlyCaptcha",
-    icon_lock = "lock-open",
-    text_lock = "Open",
-    icon_link="github",
-    body = "Friendly Captcha is a GDPR compliant European alternative to Google Recaptcha.
-    ShinyFriendlyCaptcha is a R package that provide Friendly Captcha to Shiny apps."
+# body intro
+body_intro <- tagList(
+  p(
+    class="m-1",
+    "Here are some ",
+    tags$strong("R packages that I develop and maintain.")
   ),
-  card_modif(
-    img = "image/interfacer.png",
-    href = "https://www.sesan.fr/",
-    title = "Interfacer",
-    icon_lock = "lock",
-    text_lock = "Private",
-    icon_link="globe",
-    body = "Interfacer is an R package developped for Sesan that allows to simplify the development,
-    layout, theme design and deployment of complex
-    web forms using Shiny."
-),
-  card_modif(
-    img = "image/authentifier.png",
-    href = "https://www.sesan.fr/",
-    title = "Authentifier",
-    icon_lock = "lock",
-    text_lock = "Private",
-    icon_link="globe",
-    body = "Authentifier is an R package developped for Sesan that add a simple, 
-    strong or openID authentication layer as well as a 
-    user account management toolbar to Shiny apps."
+  p(
+    class="m-1",
+    "> I like to construct",
+    tags$strong(
+      tags$a(
+        "Shiny",
+        href = "https://shiny.rstudio.com/",
+        target="_blank",
+        rel="noopener noreferrer"
+      )
+    ),
+    "packages that facilitate the design of ",
+    tags$strong("Apps ready for production "),
+    "(and maximize time for Data Science & Research)"
+  )
+)
+
+# body rating
+body_rating <- body_package(
+  img_path = "image/shinyrating2.png",
+  text = "R package that allow to create advanced rating inputs in Shiny", 
+  open = TRUE,
+  link = "https://github.com/mhanf/ShinyRating"
+)
+
+# body captcha
+body_captcha <- body_package(
+  img_path = "image/shinyfriendlycaptcha2.png",
+  text = "R package that provide Friendly Captcha to Shiny (GDPR alternative to Google Recaptcha)", 
+  open = TRUE,
+  link = "https://github.com/mhanf/ShinyFriendlyCaptcha"
+)
+
+# body interfacer
+body_interfacer <- body_package(
+  img_path = "image/interfacer2.png",
+  text = "R package to simplify the development, layout, theme design and deployment of complex web forms using Shiny", 
+  open = FALSE,
+  link = "https://www.sesan.fr/"
+)
+
+# body authentifier
+body_authentifier <- body_package(
+  img_path = "image/authentifier2.png",
+  text = "R package to add a simple, strong or openID authentication layer as well as a user account management toolbar to Shiny apps.", 
+  open = FALSE,
+  link = "https://www.sesan.fr/"
+)
+
+# final grid
+div(
+  class="grid",
+  style="--bs-gap: 1rem;",
+  # col 1
+  div(
+    class = "g-col-12 g-col-md-6 justify-content-left align-self-center g-start-1 g-start-md-1",
+    # intro package
+    accordeon_code(
+      title = "> PACKAGES",
+      body = body_intro,
+      id = "package"
+    ),
+    # break
+    p(class="m-0 p-0", style = "height: 1rem;"),
+    # shinyrating
+    accordeon_code(
+      title = "> SHINYRATING",
+      body = body_rating,
+      id = "rating",
+      show = FALSE
+    ),
+    # break
+    p(class="m-0 p-0", style = "height: 1rem;"),
+    #shinyFriendlyCaptcha
+    accordeon_code(
+      title = "> SHINYFRIENDLYCAPTCHA",
+      body = body_captcha,
+      id = "captcha",
+      show = FALSE
     )
+  ),
+  # col 2
+  div(
+    class = "g-col-12 g-col-md-6 justify-content-center align-self-center g-start-1 g-start-md-7",
+    # interfacer
+    accordeon_code(
+      title = "> INTERFACER",
+      body = body_interfacer,
+      id = "interfacer",
+      show = FALSE
+    ),
+    # break
+    p(class="m-0 p-0", style = "height: 1rem;"),
+    # authentifier
+    accordeon_code(
+      title = "> AUTHENTIFIER",
+      body = body_authentifier,
+      id = "authentifier",
+      show = FALSE
+    )
+  )
 )
 ```
 
-## Shiny Apps
-
-(Work In Progress)

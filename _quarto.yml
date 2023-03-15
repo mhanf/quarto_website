@@ -16,7 +16,7 @@ website:
         text: About
       - href: research.qmd
         text: Research
-      - href: 404.qmd
+      - href: software.qmd
         text: Project
     right:
       - icon: github
