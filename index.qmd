@@ -4,19 +4,8 @@
 #| echo: false
 #| warning: false
 library(htmltools)
-source("R/accordeon.R")
+source("R/tag_functions.R")
 
-card_code <- function(title,body){
-     div(
-      class="card shadow m-2 border-primary border border-1 rounded-0 text-primary",
-      div(
-        class="card-header bg-white text-primary border-1 border-primary fw-bold justify-content-between d-flex",
-        tags$span(title),
-        tags$span("-")
-          ),
-      div(class="card-body", body)
-) 
-}
 
 body_hello <- tagList(
   p(

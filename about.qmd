@@ -4,7 +4,7 @@
 #| warning: false
 library(htmltools)
 library(fontawesome)
-source("R/accordeon.R")
+source("R/tag_functions.R")
 
 
 # Summary

@@ -4,7 +4,7 @@
 #| warning: false
 library(htmltools)
 library(fontawesome)
-source("R/accordeon.R")
+source("R/tag_functions.R")
 
 # bodies of accordions
 
@@ -13,7 +13,7 @@ body_intro <- tagList(
   p(
     class="m-1",
     "Here are some ",
-    tags$strong("R packages that I develop and maintain.")
+    tags$strong("R packages that I have developped.")
   ),
   p(
     class="m-1",
@@ -35,7 +35,7 @@ body_intro <- tagList(
 # body rating
 body_rating <- body_package(
   img_path = "image/shinyrating2.png",
-  text = "R package that allow to create advanced rating inputs in Shiny", 
+  text = "R package that allows to create advanced rating inputs in Shiny", 
   open = TRUE,
   link = "https://github.com/mhanf/ShinyRating"
 )
@@ -43,9 +43,17 @@ body_rating <- body_package(
 # body captcha
 body_captcha <- body_package(
   img_path = "image/shinyfriendlycaptcha2.png",
-  text = "R package that provide Friendly Captcha to Shiny (GDPR alternative to Google Recaptcha)", 
+  text = "R package that provides a GDPR compliant Captcha to Shiny (Friendly Captcha)", 
   open = TRUE,
   link = "https://github.com/mhanf/ShinyFriendlyCaptcha"
+)
+
+# body lemonpie
+body_lemon <- body_package(
+  img_path = "image/under_construction.png",
+  text = "R package that provides a GDPR compliant cookies manager to Shiny (tarteaucitron)", 
+  open = TRUE,
+  link = "https://github.com/mhanf/ShinyLemonPie"
 )
 
 # body interfacer
@@ -59,7 +67,7 @@ body_interfacer <- body_package(
 # body authentifier
 body_authentifier <- body_package(
   img_path = "image/authentifier2.png",
-  text = "R package to add a simple, strong or openID authentication layer as well as a user account management toolbar to Shiny apps.", 
+  text = "R package that adds a simple, strong or openID authentication layer as well as a user account management toolbar to Shiny apps.", 
   open = FALSE,
   link = "https://www.sesan.fr/"
 )
@@ -113,6 +121,15 @@ div(
       title = "> AUTHENTIFIER",
       body = body_authentifier,
       id = "authentifier",
+      show = FALSE
+    ),
+    # break
+    p(class="m-0 p-0", style = "height: 1rem;"),
+    # authentifier
+    accordeon_code(
+      title = "> SHINYLEMONPIE",
+      body = body_lemon,
+      id = "lemon",
       show = FALSE
     )
   )
