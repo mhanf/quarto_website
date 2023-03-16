@@ -6,12 +6,13 @@ execute:
   freeze: true
 
 website:
-  title: "> M|H"
+  title: "Matthieu Hanf"
   site-url: mhanf.github.io/quarto_website/
   description: Personal website
   repo-url: https://github.com/mhanf/quarto_website
   repo-actions: issue
   navbar:
+    title: "> MH<span class='blink'>|</span>"
     left:
       - href: index.qmd
         text: Home
@@ -34,7 +35,7 @@ format:
   html:
     theme:
       light: theme/light_theme.scss
-      dark: theme/dark_theme.scss
+      dark: theme/dark_theme2.scss
     smooth-scroll: true
     link-external-newwindow: true
 

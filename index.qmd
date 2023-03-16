@@ -55,28 +55,28 @@ body_contact <- tagList(
     "> You can find me elsewhere."
     ),
   div(class="text-center",
-shiny::tags$a(
+htmltools::tags$a(
   class="btn bg-white text-primary", 
   href="https://github.com/mhanf",
   target="_blank",
   rel="noopener noreferrer",
   fontawesome::fa("github")
 ),
-shiny::tags$a(
+htmltools::tags$a(
   class="btn bg-white text-primary", 
   href="https://www.linkedin.com/in/matthieu-hanf-a03377104/",
   target="_blank",
   rel="noopener noreferrer",
   fontawesome::fa("linkedin")
 ),
-shiny::tags$a(
+htmltools::tags$a(
   class="btn bg-white text-primary", 
   href="https://orcid.org/0000-0001-7133-1323",
   target="_blank",
   rel="noopener noreferrer",
   fontawesome::fa("orcid")
 ),
-shiny::tags$a(
+htmltools::tags$a(
   class="btn bg-white text-primary", 
   href="mailto:matthieu.hanf@gmail.com",
   target="_blank",
@@ -116,6 +116,7 @@ shiny::tags$a(
 # )
 
 tagList(
+
 #   # modal
 #   modal,
 #   # modal javascript

@@ -167,3 +167,14 @@ h2, h3 {
   font-weight: bold !important;
 }
 
+
+// blink navbar brand 
+.navbar-brand:hover .blink {
+  animation: blinker 1.3s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
