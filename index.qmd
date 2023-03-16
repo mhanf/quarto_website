@@ -84,7 +84,7 @@ htmltools::tags$a(
   fontawesome::fa("envelope")
 )
 ))
-
+# 
 # modal <- div(
 #   class="modal static",
 #   id="modal_init",
@@ -115,8 +115,8 @@ htmltools::tags$a(
 #   )
 # )
 
-tagList(
-
+ tagList(
+ 
 #   # modal
 #   modal,
 #   # modal javascript

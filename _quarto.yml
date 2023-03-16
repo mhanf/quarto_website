@@ -12,7 +12,7 @@ website:
   repo-url: https://github.com/mhanf/quarto_website
   repo-actions: issue
   navbar:
-    title: "> MH<span class='blink'>|</span>"
+    title: "> M-H<span class='blink'>|</span>"
     left:
       - href: index.qmd
         text: Home

@@ -14,11 +14,11 @@ bibliography <- read_excel("data/bibliography.xlsx")
 # Summary body
 research <-
   tagList(
-    div(tags$strong("My research areas revolve around:")),
+    div("My research areas in ",tags$strong("Epidemiology & Public Health"), " revolve around:"),
     div("> Statistics & Data Science", fa("wrench")),
     div("> Infectious Diseases", fa("virus")),
-    div("> Pediatrics Epidemiology", fa("child")),
-    div("> Women Health Epidemiology", fa("female"))
+    div("> Pediatrics", fa("child")),
+    div("> Women Health", fa("female"))
   )
 
 # grid
