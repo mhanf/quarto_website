@@ -35,7 +35,7 @@ format:
   html:
     theme:
       light: theme/light_theme.scss
-      dark: theme/dark_theme2.scss
+      dark: theme/dark_theme.scss
     smooth-scroll: true
     link-external-newwindow: true
 
