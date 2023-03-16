@@ -13,7 +13,7 @@ body_intro <- tagList(
   p(
     class="m-1",
     "Here are some ",
-    tags$strong("R packages that I have developped.")
+    tags$strong("R packages that I maintain.")
   ),
   p(
     class="m-1",
