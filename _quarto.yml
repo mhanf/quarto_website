@@ -14,7 +14,6 @@ website:
   favicon: image/favicon.png
   image: image/logo.png
   open-graph: 
-    #description: The personal website of Ella Kaye
     image: image/logo.png
     image-alt: |
       A square logo made from Matthieu Hanf's name - 
