@@ -8,8 +8,8 @@ source("R/tag_functions.R")
 body_ressource <- tagList(
   p(
     class="m-1",
-    tags$strong("Technical ressources"),
-    " that I used to build this website :"
+    tags$strong("Technical ressources that I used"),
+    " to build this website :"
     ),
   p(
     class="m-1",
@@ -26,14 +26,13 @@ body_ressource <- tagList(
     class="m-1",
     "> The ",
     tags$a("github repository", href = "https://github.com/EllaKaye"),
-    " of the wonderful ",
+    " of ",
     " Ella Kaye",tags$a("website", href = "https://ellakaye.co.uk/")
     ),
   br(),
   p(
     class="m-1",
-    "Links that help me ",
-    tags$strong("to design"),
+    tags$strong(" Links that help me to design"),
     " this website:"
   ),
   p(
@@ -63,7 +62,7 @@ div(
   class="grid",
   # hello
   div(
-    class = "g-col-12 g-col-md-10 align-self-center g-start-1",
+    class = "g-col-12 g-col-md-9 align-self-center g-start-1",
     accordeon_code(
       title = "> RESSOURCES",
       body = body_ressource,
