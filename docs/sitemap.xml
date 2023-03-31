@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>mhanf.github.io/quarto_website/about.html</loc>
-    <lastmod>2023-03-17T22:20:22.195Z</lastmod>
+    <lastmod>2023-03-31T22:43:42.978Z</lastmod>
   </url>
   <url>
     <loc>mhanf.github.io/quarto_website/index.html</loc>
-    <lastmod>2023-03-17T22:20:23.569Z</lastmod>
+    <lastmod>2023-03-31T22:43:44.631Z</lastmod>
   </url>
   <url>
     <loc>mhanf.github.io/quarto_website/research.html</loc>
-    <lastmod>2023-03-17T22:20:25.502Z</lastmod>
+    <lastmod>2023-03-31T22:43:46.798Z</lastmod>
+  </url>
+  <url>
+    <loc>mhanf.github.io/quarto_website/ressources.html</loc>
+    <lastmod>2023-03-31T22:43:48.378Z</lastmod>
   </url>
   <url>
     <loc>mhanf.github.io/quarto_website/software.html</loc>
-    <lastmod>2023-03-17T22:20:26.792Z</lastmod>
+    <lastmod>2023-03-31T22:43:50.281Z</lastmod>
   </url>
 </urlset>

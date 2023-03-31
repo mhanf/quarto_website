@@ -1,0 +1,73 @@
+
+```{r}
+#| echo: false
+#| warning: false
+library(htmltools)
+source("R/tag_functions.R")
+
+body_ressource <- tagList(
+  p(
+    class="m-1",
+    tags$strong("Technical ressources"),
+    " that I used to build this website :"
+    ),
+  p(
+    class="m-1",
+    "> The official", 
+    tags$a("Quarto documentation",href="https://quarto.org/")
+    ),
+  p(
+    class="m-1",
+    "> The official", 
+    tags$a("Bootstrap 5 documentation",href="https://getbootstrap.com/")
+    )
+  ,
+  p(
+    class="m-1",
+    "> The ",
+    tags$a("github repository", href = "https://github.com/EllaKaye"),
+    " of the wonderful ",
+    " Ella Kaye",tags$a("website", href = "https://ellakaye.co.uk/")
+    ),
+  br(),
+  p(
+    class="m-1",
+    "Links that help me ",
+    tags$strong("to design"),
+    " this website:"
+  ),
+  p(
+    class="m-1",
+    "> Levon Aronian (Chess Grand Master)",
+    tags$a("website",href = "https://levonaronian.com/")
+  ),
+  p(
+    class="m-1",
+    "> The Bon Iver ViiSUALiiZER",
+    tags$a("website",href = "https://boniver.withspotify.com/")
+  ), 
+  p(
+    class="m-1",
+  "> The IBM Plex font",
+  tags$a("github repository",href = "https://github.com/IBM/plex")
+  )
+)
+
+
+
+
+
+
+# grid placement
+div(
+  class="grid",
+  # hello
+  div(
+    class = "g-col-12 g-col-md-10 align-self-center g-start-1",
+    accordeon_code(
+      title = "> RESSOURCES",
+      body = body_ressource,
+      id = "hello")
+  )
+)
+```

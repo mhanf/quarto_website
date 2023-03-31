@@ -1,0 +1,14 @@
+{
+  "hash": "f2ea016b00a9603b068ac148b2c01414",
+  "result": {
+    "markdown": "::: {.cell}\n::: {.cell-output-display}\n```{=html}\n<div class=\"grid\">\n<div class=\"g-col-12 g-col-md-10 align-self-center g-start-1\">\n<div class=\"accordion bg-white text-primary border-primary border border-1 accordion-flush\" id=\"accordeon-adapt-hello\">\n<div class=\"accordion-item\">\n<div id=\"hello-headingOne\">\n<button class=\"accordion-button bg-white text-primary p-2 \" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#hello-collapseOne\" aria-expanded=\"true\" aria-controls=\"hello-collapseOne\">\n<div class=\"fw-bold text-primary\">&gt; RESSOURCES</div>\n</button>\n<div id=\"hello-collapseOne\" class=\"accordion-collapse collapse show\" aria-labelledby=\"hello-headingOne\">\n<div class=\"accordion-body border-top border-primary\">\n<p class=\"m-1\">\nI used the following \n<strong>technical ressources</strong>\nto build this website :\n</p>\n<p class=\"m-1\">\n&gt; The official\n<a href=\"https://quarto.org/\">Quarto documentation</a>\n</p>\n<p class=\"m-1\">\n&gt; The official\n<a href=\"https://getbootstrap.com/\">Bootstrap 5 documentation</a>\n</p>\n<p class=\"m-1\">\n&gt; The \n<a href=\"https://github.com/EllaKaye\">github repository</a>\n of the wonderful \n Ella Kaye\n<a href=\"https://ellakaye.co.uk/\">website</a>\n</p>\n<br/>\n<p class=\"m-1\">\nHere are some links that \n<strong>help me to design</strong>\n this website:\n</p>\n<p class=\"m-1\">\n&gt; Levon Aronian (Chess Grand Master)\n<a href=\"https://levonaronian.com/\">website</a>\n</p>\n<p class=\"m-1\">\n&gt; The Bon Iver ViiSUALiiZER\n<a href=\"https://boniver.withspotify.com/\">website</a>\n</p>\n<p class=\"m-1\">\n&gt; The \n<a href=\"https://github.com/IBM/plex\">github repository</a>\nof the IBM Plex font\n</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n```\n:::\n:::",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
