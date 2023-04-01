@@ -8,9 +8,10 @@ source("R/tag_functions.R")
 body_ressource <- tagList(
   p(
     class="m-1",
-    tags$strong("Technical ressources"),
-    " I used to build this website:"
-    ),
+    "Here are the ",
+    tags$strong("technical and design ressources"),
+    " I used to build this website."
+  ),
   p(
     class="m-1",
     "> The Quarto", 
@@ -28,12 +29,6 @@ body_ressource <- tagList(
     tags$a("website", href = "https://ellakaye.co.uk/"),
     " of Ella Kaye"
     ),
-  br(),
-  p(
-    class="m-1",
-    tags$strong("Design ressources"),
-    " I used to build this website:"
-  ),
   p(
     class="m-1",
     "> Levon Aronian (Chess Grand Master)",
