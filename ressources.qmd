@@ -13,21 +13,20 @@ body_ressource <- tagList(
     ),
   p(
     class="m-1",
-    "> The official", 
-    tags$a("Quarto documentation",href="https://quarto.org/")
+    "> The Quarto", 
+    tags$a(" documentation",href="https://quarto.org/")
     ),
   p(
     class="m-1",
-    "> The official", 
-    tags$a("Bootstrap 5 documentation",href="https://getbootstrap.com/")
+    "> The Bootstrap 5", 
+    tags$a(" documentation",href="https://getbootstrap.com/")
     )
   ,
   p(
     class="m-1",
     "> The ",
-    tags$a("github repository", href = "https://github.com/EllaKaye"),
-    " of ",
-    " Ella Kaye",tags$a("website", href = "https://ellakaye.co.uk/")
+    tags$a("website", href = "https://ellakaye.co.uk/"),
+    " of Ella Kaye"
     ),
   br(),
   p(
