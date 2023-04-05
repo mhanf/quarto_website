@@ -329,3 +329,15 @@ accordeon_mult_code <- function(data,
   }
   final_tag
 }
+
+
+js_anim <- function(){
+  js_dep <- tagList(
+    tags$script(src = "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"),
+    tags$script(src = "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.trunk.min.js")
+  )
+  return(js_dep)
+}
+
+
+

@@ -28,6 +28,14 @@ body_error <- tagList(
   )
 )
 
+tagList(
+  # anim js dependencies
+  js_anim(),
+  # click listener
+  tags$script(
+  type="text/javascript",
+  src = "assets/fire_click.js"
+  ),
 # final compilation
         div(
           class="grid",
@@ -40,6 +48,6 @@ accordeon_code(
       body = body_error,
       id = "error"
     )
-))
+)))
 
 ```

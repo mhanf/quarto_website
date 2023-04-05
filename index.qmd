@@ -84,47 +84,16 @@ htmltools::tags$a(
   fontawesome::fa("envelope")
 )
 ))
-# 
-# modal <- div(
-#   class="modal static",
-#   id="modal_init",
-#   tabindex="-1",
-#   'aria-labelledby'="modal_initLabel",
-#   'aria-hidden'="true",
-#   div(
-#     class="modal-dialog modal-fullscreen",
-#     div(
-#       class="modal-content",
-#       div(
-#         class="modal-body",
-#         div(
-#           class="grid",
-#           style="--bs-rows: 3;",
-#           div(
-#             class="g-start-1 g-start-md-5 g-col-12 g-col-md-4",
-#             style="grid-row: 2",
-#             div(class = "card-body border border-1 border-primary",
-#             p( class="m-1 text-center fw-bold", "1982"),
-#             progress_bar(id = "pg_loading",title="",pct="5"),
-#             p( class="m-1 text-center fw-bold", "PLEASE WAIT ...")
-#             )
-#           )
-#         )
-#       )
-#     )
-#   )
-# )
+
 
  tagList(
- 
-#   # modal
-#   modal,
-#   # modal javascript
-#   tags$script(
-#   type="text/javascript",
-#   src = "assets/modal_init.js"
-# ),
-
+  # anim js dependencies
+  js_anim(),
+  # click listener
+  tags$script(
+  type="text/javascript",
+  src = "assets/fire_click.js"
+  ),
 # grid placement
 div(
   class="grid",

@@ -21,6 +21,14 @@ research <-
     div("> Women Health", fa("female"))
   )
 
+tagList(
+  # anim js dependencies
+  js_anim(),
+  # click listener
+  tags$script(
+  type="text/javascript",
+  src = "assets/fire_click.js"
+  ),
 # grid
 div(
   class="grid",
@@ -40,5 +48,6 @@ div(
     id = "accordeon", 
     show = FALSE
   )
+)
 )
 ```

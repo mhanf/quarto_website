@@ -41,16 +41,24 @@ body_ressource <- tagList(
   ), 
   p(
     class="m-1",
-  "> The IBM Plex font",
-  tags$a("github repository",href = "https://github.com/IBM/plex")
+  "> The IBM Plex font github ",
+  tags$a("repository",href = "https://github.com/IBM/plex")
+  ),
+  p(
+    class="m-1",
+  "> The Vanta.js library github ",
+  tags$a("repository",href = "https://github.com/tengbao/vanta")
   )
 )
 
-
-
-
-
-
+tagList(
+  # anim js dependencies
+  js_anim(),
+  # click listener
+  tags$script(
+  type="text/javascript",
+  src = "assets/fire_click.js"
+  ),
 # grid placement
 div(
   class="grid",
@@ -62,5 +70,6 @@ div(
       body = body_ressource,
       id = "hello")
   )
+)
 )
 ```

@@ -149,8 +149,17 @@ body_skill <- div(
   )
 )
 
-# grid layout
-div(
+
+tagList(
+  # anim js dependencies
+  js_anim(),
+  # click listener
+  tags$script(
+  type="text/javascript",
+  src = "assets/fire_click.js"
+  ),
+  # grid layout
+  div(
   class="grid",
   # summary
   div(
@@ -213,7 +222,7 @@ div(
       show = FALSE
     )
   )
-)
+))
 ```
 
 

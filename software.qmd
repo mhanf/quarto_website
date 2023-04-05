@@ -72,6 +72,14 @@ body_authentifier <- body_package(
   link = "https://www.sesan.fr/"
 )
 
+tagList(
+  # anim js dependencies
+  js_anim(),
+  # click listener
+  tags$script(
+  type="text/javascript",
+  src = "assets/fire_click.js"
+  ),
 # final grid
 div(
   class="grid",
@@ -133,6 +141,7 @@ div(
       show = FALSE
     )
   )
+)
 )
 ```
 
