@@ -1,0 +1,14 @@
+{
+  "hash": "cd28e2f6b4904522ff678388907bb43b",
+  "result": {
+    "markdown": "::: {.cell}\n::: {.cell-output-display}\n```{=html}\n\n<footer class='footer position-absolute-bottom'>\n  <div class='nav-footer'>\n    <div class='nav-footer-left'>Published with <a href='https://quarto.org/' target='_blank'>Quarto</a> | Hosted by <a href='https://www.netlify.com/' target='_blank'>Netlify</a></div>   \n    <div class='nav-footer-right'>© 2023 Matthieu Hanf | <a href='https://opensource.org/license/mit-0/' target='_blank'>MIT License</a></div>\n  </div>\n</footer>\n\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
