@@ -39,13 +39,6 @@ website:
       - icon: github
         href: https://github.com/mhanf
 
-      
-        
-  page-footer:
-    border: false
-    left: "Published with [Quarto](https://quarto.org/) | Hosted by [Netlify](https://www.netlify.com/)"
-    right: "© 2023 Matthieu Hanf | [MIT License](https://opensource.org/license/mit-0/)"
-      
 format:
   html:
     theme:

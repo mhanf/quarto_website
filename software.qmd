@@ -77,71 +77,73 @@ tagList(
   js_anim(),
   # click listener
   tags$script(
-  type="text/javascript",
-  src = "assets/fire_click.js"
+    type="text/javascript",
+    src = "assets/fire_click.js"
   ),
-# final grid
-div(
-  class="grid",
-  style="--bs-gap: 1rem;",
-  # col 1
+  # final grid
   div(
-    class = "g-col-12 g-col-md-6 justify-content-left align-self-center g-start-1 g-start-md-1",
-    # intro package
-    accordeon_code(
-      title = "> PACKAGES",
-      body = body_intro,
-      id = "package"
+    class="grid",
+    style="--bs-gap: 1rem;",
+    # col 1
+    div(
+      class = "g-col-12 g-col-md-6 justify-content-left align-self-center g-start-1 g-start-md-1",
+      # intro package
+      accordeon_code(
+        title = "> PACKAGES",
+        body = body_intro,
+        id = "package"
+      ),
+      # break
+      p(class="m-0 p-0", style = "height: 1rem;"),
+      # shinyrating
+      accordeon_code(
+        title = "> SHINYRATING",
+        body = body_rating,
+        id = "rating",
+        show = FALSE
+      ),
+      # break
+      p(class="m-0 p-0", style = "height: 1rem;"),
+      #shinyFriendlyCaptcha
+      accordeon_code(
+        title = "> SHINYFRIENDLYCAPTCHA",
+        body = body_captcha,
+        id = "captcha",
+        show = FALSE
+      )
     ),
-    # break
-    p(class="m-0 p-0", style = "height: 1rem;"),
-    # shinyrating
-    accordeon_code(
-      title = "> SHINYRATING",
-      body = body_rating,
-      id = "rating",
-      show = FALSE
-    ),
-    # break
-    p(class="m-0 p-0", style = "height: 1rem;"),
-    #shinyFriendlyCaptcha
-    accordeon_code(
-      title = "> SHINYFRIENDLYCAPTCHA",
-      body = body_captcha,
-      id = "captcha",
-      show = FALSE
+    # col 2
+    div(
+      class = "g-col-12 g-col-md-6 justify-content-center align-self-center g-start-1 g-start-md-7",
+      # interfacer
+      accordeon_code(
+        title = "> INTERFACER",
+        body = body_interfacer,
+        id = "interfacer",
+        show = FALSE
+      ),
+      # break
+      p(class="m-0 p-0", style = "height: 1rem;"),
+      # authentifier
+      accordeon_code(
+        title = "> AUTHENTIFIER",
+        body = body_authentifier,
+        id = "authentifier",
+        show = FALSE
+      ),
+      # break
+      p(class="m-0 p-0", style = "height: 1rem;"),
+      # authentifier
+      accordeon_code(
+        title = "> SHINYLEMONPIE",
+        body = body_lemon,
+        id = "lemon",
+        show = FALSE
+      )
     )
   ),
-  # col 2
-  div(
-    class = "g-col-12 g-col-md-6 justify-content-center align-self-center g-start-1 g-start-md-7",
-    # interfacer
-    accordeon_code(
-      title = "> INTERFACER",
-      body = body_interfacer,
-      id = "interfacer",
-      show = FALSE
-    ),
-    # break
-    p(class="m-0 p-0", style = "height: 1rem;"),
-    # authentifier
-    accordeon_code(
-      title = "> AUTHENTIFIER",
-      body = body_authentifier,
-      id = "authentifier",
-      show = FALSE
-    ),
-    # break
-    p(class="m-0 p-0", style = "height: 1rem;"),
-    # authentifier
-    accordeon_code(
-      title = "> SHINYLEMONPIE",
-      body = body_lemon,
-      id = "lemon",
-      show = FALSE
-    )
-  )
-)
+  # footer
+  footer_code()
 )
 ```
 

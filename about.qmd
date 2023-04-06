@@ -28,12 +28,12 @@ body_summary <- tagList(
     class="m-1",
     "I'm also a ",
     tags$strong("Research Associate at ",
-    tags$a(
-      "Inserm",
-      href = "https://www.inserm.fr/en/home/",
-      target="_blank",
-      rel="noopener noreferrer"
-    ))
+                tags$a(
+                  "Inserm",
+                  href = "https://www.inserm.fr/en/home/",
+                  target="_blank",
+                  rel="noopener noreferrer"
+                ))
   ),
   p(
     class="m-1",
@@ -149,80 +149,70 @@ body_skill <- div(
   )
 )
 
-
 tagList(
   # anim js dependencies
   js_anim(),
   # click listener
   tags$script(
-  type="text/javascript",
-  src = "assets/fire_click.js"
+    type="text/javascript",
+    src = "assets/fire_click.js"
   ),
   # grid layout
   div(
-  class="grid",
-  # summary
-  div(
-    class = "g-col-12 g-col-md-8 align-self-center g-start-1",
-    accordeon_code(
-      title = "> SUMMARY",
-      body = body_summary,
-      id = "summary"
+    class="grid",
+    # summary
+    div(
+      class = "g-col-12 g-col-md-8 align-self-center g-start-1",
+      accordeon_code(
+        title = "> SUMMARY",
+        body = body_summary,
+        id = "summary"
+      )
+    ),
+    # education
+    div(
+      class = "g-col-12 g-col-md-11 align-self-center g-start-1 g-start-md-2",
+      accordeon_code(
+        title = "> EDUCATION",
+        body = body_education,
+        id = "education",
+        show = FALSE
+      )
+    ),
+    # Academic Experience
+    div(
+      class = "g-col-12 g-col-md-11 align-self-center g-start-1 g-start-md-2",
+      accordeon_code(
+        title = "> ACADEMIC EXPERIENCE",
+        body = body_academic,
+        id = "academic",
+        show = FALSE
+      )
+    ),
+    # Professional Experience
+    div(
+      class = "g-col-12 g-col-md-11 align-self-center g-start-1 g-start-md-2",
+      accordeon_code(
+        title = "> PROFESSIONAL EXPERIENCE",
+        body = body_pro,
+        id = "professional",
+        show = FALSE
+      )
+    ),
+    # tech
+    div(
+      class = "g-col-12 g-col-md-5 align-self-center g-start-1",
+      accordeon_code(
+        title = "> TECHNICAL SKILLS",
+        body = body_skill,
+        id = "tech",
+        show = FALSE
+      )
     )
   ),
-  # # map
-  # div(
-  #   class = "g-col-12 g-col-md-4 align-self-center g-start-1 g-start-md-9",
-  #   accordeon_code(
-  #     title = "> MAP",
-  #     body = img(
-  #       src = "image/world_map2.png",
-  #       class="img-fluid rounded"
-  #       ),
-  #     id = "map"
-  #   )
-  # ),
-  # education
-  div(
-    class = "g-col-12 g-col-md-11 align-self-center g-start-1 g-start-md-2",
-    accordeon_code(
-      title = "> EDUCATION",
-      body = body_education,
-      id = "education",
-      show = FALSE
-    )
-  ),
-  # Academic Experience
-  div(
-    class = "g-col-12 g-col-md-11 align-self-center g-start-1 g-start-md-2",
-    accordeon_code(
-      title = "> ACADEMIC EXPERIENCE",
-      body = body_academic,
-      id = "academic",
-      show = FALSE
-    )
-  ),
-  # Professional Experience
-  div(
-    class = "g-col-12 g-col-md-11 align-self-center g-start-1 g-start-md-2",
-    accordeon_code(
-      title = "> PROFESSIONAL EXPERIENCE",
-      body = body_pro,
-      id = "professional",
-      show = FALSE
-    )
-  ),
-  # tech
-  div(
-    class = "g-col-12 g-col-md-5 align-self-center g-start-1",
-    accordeon_code(
-      title = "> TECHNICAL SKILLS",
-      body = body_skill,
-      id = "tech",
-      show = FALSE
-    )
-  )
-))
+  # footer
+  footer_code()
+)
 ```
 
 

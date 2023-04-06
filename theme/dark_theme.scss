@@ -186,15 +186,6 @@ h2, h3 {
  color: $primary !important; 
 }
 
-.nav-footer {
-  color: $primary !important;
-  background: $white !important;
-}
-
-.nav-footer a {
-  color: $primary !important;
-  font-weight: bold !important;
-}
 
 // blink navbar brand 
 .navbar-brand:hover .blink {
@@ -208,4 +199,9 @@ h2, h3 {
 }
 
 // footer
-.footer{z-index: 1000 !important}
+.footer{
+  position: absolute !important; 
+  left: 0 !important; 
+  bottom: 0 !important; 
+  background-color: transparent !important
+}

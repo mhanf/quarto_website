@@ -26,28 +26,30 @@ tagList(
   js_anim(),
   # click listener
   tags$script(
-  type="text/javascript",
-  src = "assets/fire_click.js"
+    type="text/javascript",
+    src = "assets/fire_click.js"
   ),
-# grid
-div(
-  class="grid",
-  # Summary
+  # grid
   div(
-    class = "g-col-12 g-col-md-9 align-self-center g-start-1 g-start-md-1",
-    accordeon_code(
-      title = "> Publications",
-      body = research,
-      id = "research",
-      show = TRUE
+    class="grid",
+    # Summary
+    div(
+      class = "g-col-12 g-col-md-9 align-self-center g-start-1 g-start-md-1",
+      accordeon_code(
+        title = "> Publications",
+        body = research,
+        id = "research",
+        show = TRUE
+      )
+    ),
+    # Publications
+    accordeon_mult_code(
+      data = bibliography,
+      id = "accordeon", 
+      show = FALSE
     )
   ),
-  # Publications
-  accordeon_mult_code(
-    data = bibliography,
-    id = "accordeon", 
-    show = FALSE
-  )
-)
+  # footer
+  footer_code()
 )
 ```

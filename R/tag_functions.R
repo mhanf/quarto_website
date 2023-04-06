@@ -339,5 +339,13 @@ js_anim <- function(){
   return(js_dep)
 }
 
-
+footer_code <- function(){
+  tags$footer(
+    " 2023 | ",
+    tags$strong("Matthieu Hanf"),
+    " | ",
+    tags$a("MIT License",href = "https://opensource.org/license/mit-0/"),
+    class="text-center w-100 p-2", style = "position: absolute; left:0; bottom:0; background-color: transparent !important"
+    )
+}
 

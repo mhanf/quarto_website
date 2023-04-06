@@ -16,19 +16,19 @@ body_ressource <- tagList(
     class="m-1",
     "> The Quarto", 
     tags$a(" documentation",href="https://quarto.org/")
-    ),
+  ),
   p(
     class="m-1",
     "> The Bootstrap 5", 
     tags$a(" documentation",href="https://getbootstrap.com/")
-    )
+  )
   ,
   p(
     class="m-1",
     "> The ",
     tags$a("website", href = "https://ellakaye.co.uk/"),
     " of Ella Kaye"
-    ),
+  ),
   p(
     class="m-1",
     "> Levon Aronian (Chess Grand Master)",
@@ -41,13 +41,13 @@ body_ressource <- tagList(
   ), 
   p(
     class="m-1",
-  "> The IBM Plex font github ",
-  tags$a("repository",href = "https://github.com/IBM/plex")
+    "> The IBM Plex font github ",
+    tags$a("repository",href = "https://github.com/IBM/plex")
   ),
   p(
     class="m-1",
-  "> The Vanta.js library github ",
-  tags$a("repository",href = "https://github.com/tengbao/vanta")
+    "> The Vanta.js library github ",
+    tags$a("repository",href = "https://github.com/tengbao/vanta")
   )
 )
 
@@ -56,20 +56,22 @@ tagList(
   js_anim(),
   # click listener
   tags$script(
-  type="text/javascript",
-  src = "assets/fire_click.js"
+    type="text/javascript",
+    src = "assets/fire_click.js"
   ),
-# grid placement
-div(
-  class="grid",
-  # hello
+  # grid placement
   div(
-    class = "g-col-12 g-col-md-9 align-self-center g-start-1",
-    accordeon_code(
-      title = "> RESSOURCES",
-      body = body_ressource,
-      id = "hello")
-  )
-)
+    class="grid",
+    # hello
+    div(
+      class = "g-col-12 g-col-md-9 align-self-center g-start-1",
+      accordeon_code(
+        title = "> RESSOURCES",
+        body = body_ressource,
+        id = "hello")
+    )
+  ),
+  # footer
+  footer_code()
 )
 ```
