@@ -16,7 +16,7 @@ if (default_theme == "alternate"){
       color: 0xffffff,
       backgroundColor: 0x0,
       spacing: 0.8,
-      chaos: 5
+      chaos: 4
     }); 
 }
 else {
@@ -32,7 +32,7 @@ var effect = VANTA.TRUNK({
       color: 0x0,
       backgroundColor:0xffffff,
       spacing: 0.8,
-      chaos: 5
+      chaos: 4
     });
 }
 
