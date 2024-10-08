@@ -9,7 +9,6 @@ website:
   title: "Matthieu Hanf"
   site-url: mhanf.github.io/quarto_website/
   description: Personal website
-  repo-url: https://github.com/mhanf/quarto_website
   repo-actions: issue
   favicon: image/favicon.png
   image: image/logo.png
@@ -29,9 +28,9 @@ website:
       - href: about.qmd
         text: About
       - href: research.qmd
-        text: Research
+        text: Researches
       - href: software.qmd
-        text: Project
+        text: Projects
       - href: ressources.qmd
         icon: lightbulb
         text: " "
