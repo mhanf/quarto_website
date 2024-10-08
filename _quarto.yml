@@ -28,7 +28,7 @@ website:
       - href: about.qmd
         text: About
       - href: research.qmd
-        text: Researches
+        text: Publications
       - href: software.qmd
         text: Projects
       - href: ressources.qmd
