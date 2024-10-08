@@ -54,7 +54,7 @@ accordeon_code <- function(title, body, id, show = TRUE) {
           class = sprintf("accordion-collapse collapse %s", collapse),
           "aria-labelledby" = sprintf("%s-headingOne", id),
           div(
-            class = "accordion-body border-top border-primary text-primary",
+            class = "accordion-body text-primary border-top border-primary text-primary",
             body
           )
         )
