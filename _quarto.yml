@@ -24,7 +24,7 @@ website:
     title: "> MH<span class='blink'>|</span>"
     left:
       - href: index.qmd
-        text: Home
+        text: Homesdsdsds
       - href: about.qmd
         text: About
       - href: research.qmd
