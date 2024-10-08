@@ -7,7 +7,7 @@ execute:
 
 website:
   title: "Matthieu Hanf"
-  site-url: mhanf.github.io/quarto_website/
+  site-url: https://mhanf.netlify.app
   description: Personal website
   repo-actions: issue
   favicon: image/favicon.png
