@@ -234,6 +234,7 @@ box_publi <- function(data) {
         )
       ),
       div(
+        class = "text-primary",
         if (data$tag_infectious[1] == 1) {
           fontawesome::fa("virus")
         },
