@@ -342,7 +342,7 @@ js_anim <- function(){
 
 footer_code <- function(){
   tags$footer(
-    " 2023 | ",
+    " 2024 | ",
     tags$strong("Matthieu Hanf"),
     " | ",
     tags$a("MIT License",href = "https://opensource.org/license/mit-0/"),
