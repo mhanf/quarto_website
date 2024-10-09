@@ -38,9 +38,9 @@ body_hello <- tagList(
     "> ",
     tags$a(class = "fw-bold", "About", href = "about.qmd"),
     "> ",
-    tags$a(class = "fw-bold", "Research", href = "research.qmd"),
+    tags$a(class = "fw-bold", "Publications", href = "research.qmd"),
     "> ",
-    tags$a(class = "fw-bold", "Project", href = "software.qmd")
+    tags$a(class = "fw-bold", "Projects", href = "software.qmd")
     )
 )
 
